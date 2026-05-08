@@ -286,6 +286,16 @@
         transform: translateY(0);
       }
 
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+
       .topbar {
         position: sticky;
         top: 0;
@@ -747,10 +757,14 @@
         box-shadow: 0 0 60px rgba(110, 243, 182, 0.12);
       }
 
+      .avatar-ring picture,
       .avatar-ring img {
         width: 100%;
         height: 100%;
         display: block;
+      }
+
+      .avatar-ring img {
         object-fit: contain;
       }
 
@@ -1365,10 +1379,24 @@
 
             <aside class="panel profile-card reveal">
               <div class="avatar-ring">
-                <img
-                  src="assets/flavio-about.jpeg"
-                  alt="Foto de Flávio Oliveira trabalhando no notebook"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      assets/flavio-about-256.webp 256w,
+                      assets/flavio-about-512.webp 512w
+                    "
+                    sizes="148px"
+                  />
+                  <img
+                    src="assets/flavio-about.jpeg"
+                    alt="Foto de Flávio Oliveira trabalhando no notebook"
+                    width="256"
+                    height="256"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <h3>Flávio Oliveira</h3>
               <p>
@@ -1769,8 +1797,12 @@
         if (!element) return;
 
         const text = element.textContent.trim();
-        element.setAttribute("aria-label", text);
         element.innerHTML = "";
+
+        const accessibleText = document.createElement("span");
+        accessibleText.className = "sr-only";
+        accessibleText.textContent = text;
+        element.appendChild(accessibleText);
 
         Array.from(text).forEach((character, index) => {
           const letter = document.createElement("span");
