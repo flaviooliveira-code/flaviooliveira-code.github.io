@@ -589,10 +589,8 @@
         box-shadow: var(--shadow);
       }
 
-      .stat-card::after,
-      .skill-group::after,
-      .education-card::after,
-      .timeline-item::after {
+      .about-grid > .panel::after,
+      .project-card::after {
         content: "";
         position: absolute;
         inset: -1px;
@@ -611,18 +609,15 @@
           transform 0.55s ease;
       }
 
-      .stat-card:hover::after,
-      .skill-group:hover::after,
-      .education-card:hover::after,
-      .timeline-item:hover::after {
+      .about-grid > .panel:hover::after,
+      .project-card:hover::after,
+      .project-card:focus-visible::after {
         opacity: 1;
         transform: translateX(42%);
       }
 
-      .stat-card:hover,
-      .skill-group:hover,
-      .education-card:hover,
-      .timeline-item:hover {
+      .about-grid > .panel:hover {
+        transform: translateY(-4px);
         border-color: rgba(110, 243, 182, 0.42);
         background: rgba(18, 27, 41, 0.94);
         box-shadow:
@@ -636,15 +631,6 @@
         flex-direction: column;
         justify-content: center;
         padding: 18px;
-        transition:
-          transform 0.22s ease,
-          border-color 0.22s ease,
-          background 0.22s ease,
-          box-shadow 0.22s ease;
-      }
-
-      .stat-card:hover {
-        transform: translateY(-4px);
       }
 
       .stat-card strong {
@@ -766,6 +752,14 @@
         padding: 26px;
       }
 
+      .about-grid > .panel {
+        transition:
+          transform 0.22s ease,
+          border-color 0.22s ease,
+          background 0.22s ease,
+          box-shadow 0.22s ease;
+      }
+
       .panel p {
         color: var(--muted);
         font-size: 17px;
@@ -862,8 +856,7 @@
       }
 
       .project-card:hover .chip,
-      .profile-card:hover .chip,
-      .skill-group:hover .chip {
+      .about-grid > .panel:hover .chip {
         border-color: rgba(110, 243, 182, 0.38);
         background: rgba(110, 243, 182, 0.1);
         color: var(--green);
@@ -949,15 +942,6 @@
         flex-direction: column;
         justify-content: center;
         padding: 20px;
-        transition:
-          transform 0.22s ease,
-          border-color 0.22s ease,
-          background 0.22s ease,
-          box-shadow 0.22s ease;
-      }
-
-      .skill-group:hover {
-        transform: translateY(-6px);
       }
 
       .skill-group h3 {
@@ -965,16 +949,6 @@
         color: var(--cyan);
         font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 15px;
-        transition:
-          color 0.2s ease,
-          text-shadow 0.2s ease,
-          transform 0.2s ease;
-      }
-
-      .skill-group:hover h3 {
-        color: var(--green);
-        text-shadow: 0 0 22px rgba(110, 243, 182, 0.22);
-        transform: translateX(2px);
       }
 
       .skill-group ul {
@@ -986,38 +960,8 @@
       }
 
       .skill-group li {
-        position: relative;
         color: var(--muted);
         font-size: 14px;
-        transition:
-          color 0.2s ease,
-          transform 0.2s ease;
-      }
-
-      .skill-group li::before {
-        content: "";
-        position: absolute;
-        top: 0.78em;
-        left: -12px;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background: var(--green);
-        opacity: 0;
-        transform: scale(0.4);
-        transition:
-          opacity 0.2s ease,
-          transform 0.2s ease;
-      }
-
-      .skill-group:hover li {
-        color: var(--text);
-        transform: translateX(8px);
-      }
-
-      .skill-group:hover li::before {
-        opacity: 1;
-        transform: scale(1);
       }
 
       .timeline {
@@ -1052,15 +996,6 @@
         flex-direction: column;
         justify-content: center;
         padding: 24px 26px;
-        transition:
-          transform 0.22s ease,
-          border-color 0.22s ease,
-          background 0.22s ease,
-          box-shadow 0.22s ease;
-      }
-
-      .timeline-item:hover {
-        transform: translateY(-4px);
       }
 
       .timeline-item:nth-child(odd) {
@@ -1157,15 +1092,6 @@
         flex-direction: column;
         justify-content: center;
         padding: 22px;
-        transition:
-          transform 0.22s ease,
-          border-color 0.22s ease,
-          background 0.22s ease,
-          box-shadow 0.22s ease;
-      }
-
-      .education-card:hover {
-        transform: translateY(-5px);
       }
 
       .education-card h3 {
@@ -1573,8 +1499,8 @@
               <h2>Projetos em destaque no GitHub.</h2>
             </div>
             <p>
-              Repositórios pinados no meu perfil público, com foco em produto,
-              automação e terminal.
+              Repositórios em destaque no meu perifl público do GitHub, com
+              código aberto, projetos pessoais e contribuições.
             </p>
           </div>
 
@@ -1720,8 +1646,7 @@
               <ul>
                 <li>MySQL</li>
                 <li>SQL Server</li>
-                <li>SQL puro</li>
-                <li>Modelagem operacional</li>
+                <li>Modelagem de dados</li>
               </ul>
             </article>
 
