@@ -476,15 +476,19 @@
       }
 
       .hero-letter {
+        --letter-base-color: var(--text);
+        --letter-glow-color: #f7fffd;
+
         display: inline-block;
-        color: var(--text);
+        color: var(--letter-base-color);
         animation: letter-glow 3.2s ease-in-out infinite;
         animation-delay: calc(var(--letter-index) * 52ms);
         will-change: color, text-shadow, transform;
       }
 
       .hero-name .hero-letter {
-        color: var(--green);
+        --letter-base-color: var(--green);
+        --letter-glow-color: #f7fffd;
       }
 
       .hero-letter-space {
@@ -495,13 +499,13 @@
         0%,
         52%,
         100% {
-          color: currentColor;
+          color: var(--letter-base-color);
           text-shadow: 0 0 0 rgba(110, 243, 182, 0);
           transform: translateY(0);
         }
 
         12% {
-          color: #f7fffd;
+          color: var(--letter-glow-color);
           text-shadow:
             0 0 10px rgba(110, 243, 182, 0.7),
             0 0 26px rgba(103, 232, 249, 0.35);
