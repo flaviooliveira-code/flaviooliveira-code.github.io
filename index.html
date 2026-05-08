@@ -1,33 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<!doctype html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Flávio Oliveira - Desenvolvedor Full Stack & Especialista em TI
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flávio Oliveira - Desenvolvedor Full Stack</title>
     <meta
       name="description"
-      content="Desenvolvedor full stack com expertise em React, PHP, Next.js, MySQL e Linux. Projetos práticos, YouTube técnico e soluções reais para empresas."
+      content="Flávio Oliveira é desenvolvedor full stack com 10+ anos de experiência em modernização de sistemas, APIs REST, automações, mobile e infraestrutura educacional."
     />
     <meta name="author" content="Flávio Oliveira" />
     <meta
       name="keywords"
-      content="Flávio Oliveira, desenvolvedor, full stack, react, next.js, php, tailwind, linux, github, sistemas, TI, automação, youtube técnico, scripts"
+      content="Flávio Oliveira, desenvolvedor full stack, React, React Native, Next.js, TypeScript, PHP, C#, .NET, Node.js, Python, SQL Server, MySQL, Docker, automação"
     />
+    <link rel="canonical" href="https://flaviooliveira-code.github.io/" />
     <meta
       property="og:title"
       content="Flávio Oliveira - Desenvolvedor Full Stack"
     />
     <meta
       property="og:description"
-      content="Portfólio, projetos, YouTube técnico e soluções web modernas."
+      content="Portfólio técnico de Flávio Oliveira: desenvolvimento full stack, modernização de sistemas, APIs, mobile e automações."
     />
     <meta
       property="og:image"
-      content="https://avatars.githubusercontent.com/u/12213640?v=4"
+      content="https://avatars.githubusercontent.com/flaviooliveira-code"
     />
-    <meta property="og:url" content="https://oliveiradeflavio.github.io" />
+    <meta property="og:url" content="https://flaviooliveira-code.github.io/" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -36,943 +35,1681 @@
     />
     <meta
       name="twitter:description"
-      content="Programador com foco em soluções web modernas, automação e gestão de TI."
+      content="10+ anos criando sistemas web, APIs REST, automações e modernizações de sistemas legados."
     />
     <meta
       name="twitter:image"
-      content="https://avatars.githubusercontent.com/u/12213640?v=4"
+      content="https://avatars.githubusercontent.com/flaviooliveira-code"
     />
-
-    <link
-      rel="shortcut icon"
-      href="assets/favicon-32x32.png"
-      type="image/x-icon"
-    />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-    />
+    <meta name="theme-color" content="#05070b" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <style>
       :root {
-        --bg-primary: #0f172a;
-        --bg-secondary: #1e293b;
-        --bg-accent: #334155;
-        --text-primary: #f1f5f9;
-        --text-secondary: #cbd5e1;
-        --accent-blue: #3b82f6;
-        --accent-purple: #8b5cf6;
-        --accent-green: #10b981;
+        color-scheme: dark;
+        --bg: #05070b;
+        --bg-2: #080d14;
+        --panel: rgba(14, 20, 31, 0.82);
+        --panel-strong: rgba(18, 27, 41, 0.96);
+        --line: rgba(127, 255, 212, 0.18);
+        --line-2: rgba(148, 163, 184, 0.18);
+        --text: #edf7ff;
+        --muted: #9fb0c7;
+        --soft: #65758f;
+        --green: #6ef3b6;
+        --cyan: #67e8f9;
+        --blue: #7aa2ff;
+        --orange: #fbbf77;
+        --danger: #ff6b8b;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+        --container: 1180px;
       }
 
-      body {
-        background-color: var(--bg-primary);
-        color: var(--text-primary);
+      * {
+        box-sizing: border-box;
       }
 
-      .navbar-glass {
-        background: rgba(15, 23, 42, 0.95);
-        backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(51, 65, 85, 0.3);
-      }
-
-      .gradient-text {
-        background: linear-gradient(
-          135deg,
-          var(--accent-blue),
-          var(--accent-purple)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .card-glass {
-        background: rgba(30, 41, 59, 0.8);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(51, 65, 85, 0.3);
-      }
-
-      .tech-badge {
-        background: linear-gradient(
-          135deg,
-          rgba(59, 130, 246, 0.1),
-          rgba(139, 92, 246, 0.1)
-        );
-        border: 1px solid rgba(59, 130, 246, 0.3);
-        transition: all 0.3s ease;
-      }
-
-      .tech-badge:hover {
-        background: linear-gradient(
-          135deg,
-          rgba(59, 130, 246, 0.2),
-          rgba(139, 92, 246, 0.2)
-        );
-        border-color: rgba(59, 130, 246, 0.5);
-        transform: translateY(-2px);
-      }
-
-      .project-card {
-        background: rgba(30, 41, 59, 0.8);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(51, 65, 85, 0.3);
-        transition: all 0.3s ease;
-      }
-
-      .project-card:hover {
-        transform: translateY(-5px);
-        border-color: rgba(59, 130, 246, 0.5);
-        box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
-      }
-
-      .smooth-scroll {
+      html {
+        overflow-x: hidden;
         scroll-behavior: smooth;
       }
 
-      .navbar-menu {
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
+      body {
+        margin: 0;
+        min-width: 320px;
+        overflow-x: hidden;
+        background:
+          radial-gradient(
+            circle at 18% 12%,
+            rgba(103, 232, 249, 0.14),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 84% 8%,
+            rgba(110, 243, 182, 0.12),
+            transparent 26%
+          ),
+          linear-gradient(180deg, #05070b 0%, #08101a 46%, #05070b 100%);
+        color: var(--text);
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.5;
       }
 
-      .navbar-menu.active {
-        transform: translateX(0);
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background-image:
+          linear-gradient(rgba(127, 255, 212, 0.045) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(127, 255, 212, 0.045) 1px,
+            transparent 1px
+          );
+        background-size: 44px 44px;
+        mask-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.9),
+          rgba(0, 0, 0, 0.18)
+        );
       }
 
-      .navbar-overlay {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.025),
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px,
+          transparent 4px
+        );
+        opacity: 0.34;
       }
 
-      .navbar-overlay.active {
-        opacity: 1;
-        visibility: visible;
+      a {
+        color: inherit;
+        text-decoration: none;
       }
-      @keyframes fadeInUp {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 40px));
+        margin-inline: auto;
+      }
+
+      .skip-link {
+        position: fixed;
+        left: 16px;
+        top: 12px;
+        z-index: 999;
+        transform: translateY(-160%);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--panel-strong);
+        color: var(--green);
+        padding: 10px 14px;
+        font-weight: 800;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        border-bottom: 1px solid rgba(127, 255, 212, 0.12);
+        background: rgba(5, 7, 11, 0.76);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        display: flex;
+        min-height: 72px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 900;
+        letter-spacing: 0.01em;
+      }
+
+      .prompt-mark {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(110, 243, 182, 0.08);
+        color: var(--green);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        box-shadow: 0 0 30px rgba(110, 243, 182, 0.12);
+      }
+
+      .brand small {
+        display: block;
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .nav-links a,
+      .mobile-panel a {
+        border: 1px solid transparent;
+        border-radius: 999px;
+        color: var(--muted);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+        font-weight: 750;
+        padding: 9px 11px;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible,
+      .mobile-panel a:hover,
+      .mobile-panel a:focus-visible {
+        border-color: var(--line);
+        background: rgba(103, 232, 249, 0.06);
+        color: var(--green);
+        outline: none;
+      }
+
+      .mobile-toggle {
+        display: none;
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(14, 20, 31, 0.86);
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      .mobile-toggle span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        margin: 4px auto;
+        border-radius: 999px;
+        background: currentColor;
+      }
+
+      .mobile-panel {
+        display: none;
+        border-top: 1px solid var(--line-2);
+        padding: 0 0 16px;
+      }
+
+      .mobile-panel.is-open {
+        display: grid;
+        gap: 8px;
+      }
+
+      .section {
+        padding: 92px 0;
+      }
+
+      .hero {
+        min-height: calc(100dvh - 72px);
+        display: grid;
+        align-items: center;
+        padding: 62px 0 92px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.03fr) minmax(340px, 0.75fr);
+        align-items: center;
+        gap: 44px;
+      }
+
+      .hero-grid > *,
+      .about-grid > *,
+      .projects > *,
+      .skills-grid > *,
+      .education-grid > *,
+      .contact-panel > * {
+        min-width: 0;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        border: 1px solid rgba(110, 243, 182, 0.28);
+        border-radius: 999px;
+        background: rgba(110, 243, 182, 0.08);
+        color: var(--green);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+        font-weight: 800;
+        padding: 8px 12px;
+      }
+
+      .status::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--green);
+        box-shadow: 0 0 0 6px rgba(110, 243, 182, 0.11);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 22px 0 0;
+        font-size: clamp(46px, 7.5vw, 98px);
+        line-height: 0.9;
+        letter-spacing: -0.055em;
+      }
+
+      .hero-name {
+        color: var(--green);
+        text-shadow: 0 0 42px rgba(110, 243, 182, 0.22);
+      }
+
+      .hero-title {
+        display: inline-block;
+        color: var(--text);
+      }
+
+      .hero-letter {
+        display: inline-block;
+        color: var(--text);
+        animation: letter-glow 3.2s ease-in-out infinite;
+        animation-delay: calc(var(--letter-index) * 52ms);
+        will-change: color, text-shadow, transform;
+      }
+
+      .hero-name .hero-letter {
+        color: var(--green);
+      }
+
+      .hero-letter-space {
+        width: 0.28em;
+      }
+
+      @keyframes letter-glow {
+        0%,
+        52%,
         100% {
-          opacity: 1;
+          color: currentColor;
+          text-shadow: 0 0 0 rgba(110, 243, 182, 0);
           transform: translateY(0);
         }
-      }
 
-      .animate-fadeInUp {
-        animation: fadeInUp 0.6s ease-out forwards;
-      }
-
-      @keyframes gradientMove {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
+        12% {
+          color: #f7fffd;
+          text-shadow:
+            0 0 10px rgba(110, 243, 182, 0.7),
+            0 0 26px rgba(103, 232, 249, 0.35);
+          transform: translateY(-0.035em);
         }
       }
 
-      .animate-gradient-text {
-        background: linear-gradient(270deg, #3b82f6, #8b5cf6, #10b981);
-        background-size: 600% 600%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: gradientMove 6s ease infinite;
+      .subtitle {
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(18px, 2vw, 23px);
+        max-width: 100%;
+        max-width: 740px;
+      }
+
+      .hero-actions,
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .btn {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(14, 20, 31, 0.74);
+        color: var(--text);
+        font-weight: 850;
+        padding: 12px 18px;
+        transition:
+          transform 0.2s ease,
+          border-color 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .btn:hover,
+      .btn:focus-visible {
+        transform: translateY(-2px);
+        border-color: rgba(110, 243, 182, 0.5);
+        background: rgba(110, 243, 182, 0.08);
+        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+        outline: none;
+      }
+
+      .btn-primary {
+        border-color: rgba(110, 243, 182, 0.62);
+        background: linear-gradient(
+          135deg,
+          rgba(110, 243, 182, 0.92),
+          rgba(103, 232, 249, 0.82)
+        );
+        color: #061017;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 34px;
+        max-width: 760px;
+      }
+
+      .stat-card,
+      .terminal,
+      .panel,
+      .project-card,
+      .timeline-item,
+      .education-card {
+        border: 1px solid var(--line-2);
+        border-radius: 24px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .stat-card {
+        display: flex;
+        min-height: 118px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px;
+      }
+
+      .stat-card strong {
+        display: block;
+        color: var(--green);
+        font-size: 28px;
+        line-height: 1;
+      }
+
+      .stat-card span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .terminal {
+        overflow: hidden;
+        background: rgba(4, 8, 13, 0.88);
+      }
+
+      .terminal-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        border-bottom: 1px solid var(--line-2);
+        background: rgba(255, 255, 255, 0.035);
+        padding: 12px 14px;
+      }
+
+      .traffic {
+        display: inline-flex;
+        gap: 7px;
+      }
+
+      .traffic i {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+
+      .traffic i:nth-child(1) {
+        background: var(--danger);
+      }
+
+      .traffic i:nth-child(2) {
+        background: var(--orange);
+      }
+
+      .traffic i:nth-child(3) {
+        background: var(--green);
+      }
+
+      .terminal-title {
+        color: var(--soft);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+      }
+
+      .terminal-body {
+        padding: 22px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 14px;
+      }
+
+      .line {
+        margin: 0 0 14px;
+        color: var(--muted);
+      }
+
+      .cmd {
+        color: var(--green);
+      }
+
+      .out {
+        color: var(--text);
+      }
+
+      .comment {
+        color: var(--soft);
+      }
+
+      .section-kicker {
+        color: var(--green);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 30px;
+      }
+
+      .section-head h2 {
+        margin: 8px 0 0;
+        font-size: clamp(31px, 4vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -0.03em;
+      }
+
+      .section-head p {
+        max-width: 480px;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 360px;
+        gap: 18px;
+      }
+
+      .panel {
+        padding: 26px;
+      }
+
+      .panel p {
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .focus-list {
+        display: grid;
+        gap: 12px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .focus-list li {
+        display: flex;
+        gap: 10px;
+        color: var(--text);
+      }
+
+      .focus-list li::before {
+        content: ">";
+        color: var(--green);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
+      .profile-card {
+        position: relative;
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 26px 22px;
+        text-align: center;
+      }
+
+      .avatar-ring {
+        width: 148px;
+        height: 148px;
+        overflow: hidden;
+        border: 1px solid rgba(110, 243, 182, 0.35);
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 0 60px rgba(110, 243, 182, 0.12);
+      }
+
+      .avatar-ring img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      .profile-card h3 {
+        margin: 18px 0 6px;
+        font-size: 28px;
+      }
+
+      .profile-card p {
+        max-width: 290px;
+        margin-bottom: 0;
+      }
+
+      .profile-card .chips {
+        justify-content: center;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .chip {
+        border: 1px solid rgba(103, 232, 249, 0.18);
+        border-radius: 999px;
+        background: rgba(103, 232, 249, 0.06);
+        color: var(--cyan);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        font-weight: 800;
+        padding: 7px 9px;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .project-card {
+        display: flex;
+        min-height: 270px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 22px;
+        transition:
+          transform 0.2s ease,
+          border-color 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .project-card:hover,
+      .project-card:focus-within {
+        transform: translateY(-5px);
+        border-color: rgba(110, 243, 182, 0.46);
+        background: rgba(18, 27, 41, 0.94);
+      }
+
+      .project-meta {
+        color: var(--green);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        font-weight: 850;
+      }
+
+      .project-card h3 {
+        margin: 12px 0 10px;
+        font-size: 24px;
+        line-height: 1.08;
+      }
+
+      .project-card p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .project-card .chips {
+        margin-top: 16px;
+      }
+
+      .project-link {
+        display: inline-flex;
+        width: fit-content;
+        margin-top: 14px;
+        color: var(--green);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-weight: 850;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .skill-group {
+        display: flex;
+        min-height: 210px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .skill-group h3 {
+        margin: 0 0 14px;
+        color: var(--cyan);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 15px;
+      }
+
+      .skill-group ul {
+        display: grid;
+        gap: 9px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .skill-group li {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .timeline {
+        position: relative;
+        display: grid;
+        gap: 48px;
+        padding: 16px 0;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        transform: translateX(-50%);
+        background: linear-gradient(
+          180deg,
+          rgba(103, 232, 249, 0.9),
+          rgba(110, 243, 182, 0.55),
+          rgba(139, 92, 246, 0.86)
+        );
+        box-shadow: 0 0 28px rgba(103, 232, 249, 0.18);
+      }
+
+      .timeline-item {
+        position: relative;
+        display: flex;
+        width: min(46%, 580px);
+        min-height: 230px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24px 26px;
+      }
+
+      .timeline-item:nth-child(odd) {
+        justify-self: start;
+      }
+
+      .timeline-item:nth-child(even) {
+        justify-self: end;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        border: 3px solid var(--cyan);
+        border-radius: 50%;
+        background:
+          radial-gradient(
+            circle at center,
+            var(--green) 0 28%,
+            transparent 29%
+          ),
+          var(--bg);
+        box-shadow:
+          0 0 0 6px rgba(103, 232, 249, 0.08),
+          0 0 26px rgba(103, 232, 249, 0.34);
+      }
+
+      .timeline-item:nth-child(odd)::before {
+        right: calc(-8.695% - 13px);
+        transform: translate(50%, -50%);
+      }
+
+      .timeline-item:nth-child(even)::before {
+        left: calc(-8.695% - 13px);
+        transform: translate(-50%, -50%);
+      }
+
+      .time {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--green);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 15px;
+        font-weight: 850;
+      }
+
+      .time::before {
+        content: "";
+        width: 17px;
+        height: 14px;
+        border: 2px solid currentColor;
+        border-radius: 4px;
+        box-shadow: inset 0 5px 0 rgba(103, 232, 249, 0.12);
+      }
+
+      .timeline-item h3 {
+        margin: 18px 0 4px;
+        font-size: clamp(23px, 2.2vw, 30px);
+        line-height: 1.05;
+      }
+
+      .company {
+        color: var(--muted);
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .timeline-item ul {
+        display: grid;
+        gap: 7px;
+        margin: 18px 0 0;
+        padding: 0;
+        color: var(--muted);
+        list-style: none;
+      }
+
+      .timeline-item li {
+        line-height: 1.45;
+      }
+
+      .education-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 16px;
+      }
+
+      .education-card {
+        display: flex;
+        min-height: 260px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 22px;
+      }
+
+      .education-card h3 {
+        margin: 0 0 14px;
+        color: var(--cyan);
+      }
+
+      .compact-list {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .compact-list li {
+        display: grid;
+        gap: 3px;
+        color: var(--text);
+      }
+
+      .compact-list span {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .contact-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 360px;
+        gap: 18px;
+        align-items: stretch;
+      }
+
+      .contact-panel .panel,
+      .contact-code {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .contact-code {
+        border: 1px solid var(--line-2);
+        border-radius: 24px;
+        background: rgba(4, 8, 13, 0.88);
+        padding: 24px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        color: var(--muted);
+      }
+
+      .contact-code strong {
+        color: var(--text);
+      }
+
+      .footer {
+        border-top: 1px solid var(--line-2);
+        padding: 30px 0;
+        color: var(--soft);
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .reveal,
+        .btn,
+        .project-card,
+        .hero-letter {
+          animation: none;
+          transition: none;
+        }
+      }
+
+      @media (max-width: 1060px) {
+        .hero-grid,
+        .about-grid,
+        .contact-panel,
+        .education-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .projects {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .skills-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .timeline {
+          gap: 34px;
+          padding-left: 34px;
+        }
+
+        .timeline::before {
+          left: 10px;
+          transform: none;
+        }
+
+        .timeline-item,
+        .timeline-item:nth-child(odd),
+        .timeline-item:nth-child(even) {
+          width: 100%;
+          min-height: auto;
+          justify-self: stretch;
+        }
+
+        .timeline-item:nth-child(odd)::before,
+        .timeline-item:nth-child(even)::before {
+          left: -24px;
+          right: auto;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      @media (max-width: 780px) {
+        body::before,
+        body::after {
+          display: none;
+        }
+
+        .container {
+          width: min(100% - 28px, var(--container));
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-toggle {
+          display: inline-block;
+        }
+
+        .hero {
+          min-height: auto;
+          padding: 42px 0 62px;
+        }
+
+        h1 {
+          font-size: clamp(37px, 11.8vw, 50px);
+          line-height: 0.94;
+          letter-spacing: -0.065em;
+        }
+
+        .stats,
+        .projects,
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section {
+          padding: 64px 0;
+        }
+
+        .section-head {
+          align-items: start;
+          flex-direction: column;
+        }
+
+        .timeline {
+          padding-left: 28px;
+        }
+
+        .timeline-item:nth-child(odd)::before,
+        .timeline-item:nth-child(even)::before {
+          left: -18px;
+        }
+
+        .timeline-item {
+          padding: 24px;
+        }
+
+        .terminal-body {
+          font-size: 13px;
+          overflow-x: auto;
+        }
+
+        .btn {
+          width: 100%;
+        }
       }
     </style>
   </head>
-  <body
-    class="bg-gray-900 text-white snap-y snap-mandatory overflow-y-scroll h-screen"
-  >
-    <!-- Navbar -->
-    <nav
-      class="navbar-glass fixed w-full top-0 z-50 transition-all duration-300"
-    >
-      <div class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
-          <div class="text-2xl font-bold">
-            <span class="gradient-text animate-gradient-text"
-              >Flávio Oliveira</span
-            >
-          </div>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-          <!-- Desktop Menu -->
-          <div class="hidden md:flex space-x-8">
-            <a
-              href="#home"
-              class="hover:text-blue-400 transition-colors duration-300"
-              >Início</a
-            >
-            <a
-              href="#about"
-              class="hover:text-blue-400 transition-colors duration-300"
-              >Sobre</a
-            >
-            <a
-              href="#skills"
-              class="hover:text-blue-400 transition-colors duration-300"
-              >Skills</a
-            >
-            <a
-              href="#projects"
-              class="hover:text-blue-400 transition-colors duration-300"
-              >Projetos</a
-            >
-            <a
-              href="#youtube"
-              class="hover:text-blue-400 transition-colors duration-300"
-              >YouTube</a
-            >
-            <a
-              href="#contact"
-              class="hover:text-blue-400 transition-colors duration-300"
-              >Contato</a
-            >
-          </div>
-
-          <!-- Mobile Menu Button -->
-          <button class="md:hidden text-white" onclick="toggleMobileMenu()">
-            <i class="fas fa-bars text-xl"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu Overlay -->
-      <div
-        class="navbar-overlay fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-        onclick="toggleMobileMenu()"
-      ></div>
-
-      <!-- Mobile Menu -->
-      <div
-        class="navbar-menu fixed top-0 right-0 h-full w-40 bg-gray-800 z-50 md:hidden p-6"
-      >
-        <div class="flex justify-end mb-8 text-center">
-          <button onclick="toggleMobileMenu()" class="text-white">
-            <i class="fas fa-times text-xl"></i>
-          </button>
-        </div>
-        <div
-          class="flex flex-col space-y-6 bg-gray-800 p-4 rounded-lg shadow-lg"
-        >
+    <header class="topbar">
+      <div class="container">
+        <nav class="nav" aria-label="Navegação principal">
           <a
+            class="brand"
             href="#home"
-            class="hover:text-blue-40w transition-colors duration-300"
-            onclick="toggleMobileMenu()"
-            >Início</a
+            aria-label="Página inicial de Flávio Oliveira"
           >
-          <a
-            href="#about"
-            class="hover:text-blue-400 transition-colors duration-300"
-            onclick="toggleMobileMenu()"
-            >Sobre</a
+            <span class="prompt-mark" aria-hidden="true">~/</span>
+            <span>
+              Flávio Oliveira
+              <small>full-stack.dev</small>
+            </span>
+          </a>
+
+          <div class="nav-links">
+            <a href="#about">// sobre</a>
+            <a href="#projects">// projetos</a>
+            <a href="#skills">// habilidades</a>
+            <a href="#experience">// experiência</a>
+            <a href="#contact">// contato</a>
+          </div>
+
+          <button
+            class="mobile-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            data-menu-toggle
           >
-          <a
-            href="#skills"
-            class="hover:text-blue-400 transition-colors duration-300"
-            onclick="toggleMobileMenu()"
-            >Skills</a
-          >
-          <a
-            href="#projects"
-            class="hover:text-blue-400 transition-colors duration-300"
-            onclick="toggleMobileMenu()"
-            >Projetos</a
-          >
-          <a
-            href="#youtube"
-            class="hover:text-blue-400 transition-colors duration-300"
-            onclick="toggleMobileMenu()"
-            >YouTube</a
-          >
-          <a
-            href="#contact"
-            class="hover:text-blue-400 transition-colors duration-300"
-            onclick="toggleMobileMenu()"
-            >Contato</a
-          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+
+        <div class="mobile-panel" data-mobile-menu>
+          <a href="#about">// sobre</a>
+          <a href="#projects">// projetos</a>
+          <a href="#skills">// habilidades</a>
+          <a href="#experience">// experiência</a>
+          <a href="#contact">// contato</a>
         </div>
       </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section
-      id="home"
-      class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 snap-start"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"
-      ></div>
-      <div class="container mx-auto px-4 text-center relative z-10">
-        <div class="max-w-4xl mx-auto">
-          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span class="gradient-text animate-gradient-text"
-              >Programador Full Stack</span
-            >
-            <br />
-            <!-- <span class="text-gray-300">& Gestor de TI</span> -->
-          </h1>
-          <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-            Graduado em Análise e Desenvolvimento de Sistemas e <br />Gestão de
-            TI com MBA em Gestão Empresarial.<br />
-            Unindo conhecimentos técnicos e visão estratégica de negócios.
-          </p>
-          <div
-            class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-          >
-            <a
-              href="#contact"
-              class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-300 flex items-center gap-2"
-            >
-              <i class="fas fa-envelope"></i>
-              Entre em Contato
-            </a>
-            <a
-              href="#projects"
-              class="px-8 py-3 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors duration-300 flex items-center gap-2"
-            >
-              <i class="fas fa-code"></i>
-              Ver Projetos
-            </a>
-          </div>
-          <div class="flex justify-center space-x-6">
-            <a
-              href="https://linkedin.com/in/fladoliveira"
-              target="_blank"
-              class="text-2xl hover:text-blue-400 transition-colors duration-300"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/oliveiradeflavio"
-              target="_blank"
-              class="text-2xl hover:text-blue-400 transition-colors duration-300"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCRPBNcEICRhlKb1IdKfiCxw"
-              target="_blank"
-              class="text-2xl hover:text-red-400 transition-colors duration-300"
-            >
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <main id="conteudo">
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <h1>
+              <span class="hero-name">Flávio</span><br />
+              <span class="hero-title">Desenvolvedor Full Stack</span>
+            </h1>
+            <p class="subtitle">
+              10+ anos construindo, modernizando e mantendo sistemas web, APIs
+              REST, aplicações mobile, automações e infraestrutura para
+              operações reais.
+            </p>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-800/50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-4xl font-bold text-center mb-12">
-            <span class="gradient-text animate-gradient-text">Sobre Mim</span>
-          </h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="card-glass rounded-lg p-8">
-              <h3 class="text-2xl font-bold mb-4 text-blue-400">
-                <i class="fas fa-user-tie mr-2"></i>
-                Experiência Profissional
-              </h3>
-              <p class="text-gray-300 leading-relaxed">
-                Atuação sólida em <strong>TI</strong> como
-                <strong>Desenvolvedor Full Stack</strong>,
-                <strong>SysAdmin</strong> e <strong>suporte técnico</strong>.
-                Combinando conhecimentos técnicos profundos com visão
-                estratégica de negócios, permitindo entregar soluções que
-                realmente impactam os resultados da empresa.
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/flaviooliveira-code"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                class="btn"
+                href="https://linkedin.com/in/fladoliveira"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a class="btn" href="#projects">Ver projetos</a>
+            </div>
+
+            <div class="stats" aria-label="Resumo profissional">
+              <article class="stat-card">
+                <strong>10+</strong>
+                <span>anos de experiência em tecnologia</span>
+              </article>
+              <article class="stat-card">
+                <strong>5</strong>
+                <span>stacks entre frontend, backend e automação</span>
+              </article>
+              <article class="stat-card">
+                <strong>Full stack</strong>
+                <span>frontend, APIs, mobile, dados e automações</span>
+              </article>
+            </div>
+          </div>
+
+          <aside class="terminal" aria-label="Terminal profissional">
+            <div class="terminal-bar">
+              <span class="traffic" aria-hidden="true"
+                ><i></i><i></i><i></i
+              ></span>
+              <span class="terminal-title">flavio@portfolio:~</span>
+            </div>
+            <div class="terminal-body">
+              <p class="line"><span class="cmd">$ whoami</span></p>
+              <p class="line out">Flávio Oliveira / Desenvolvedor Full Stack</p>
+              <p class="line"><span class="cmd">$ cat stack.txt</span></p>
+              <p class="line out">
+                React · React Native · Next.js · Node.js · C#/.NET · PHP ·
+                Python
+              </p>
+              <p class="line"><span class="cmd">$ echo $FOCUS</span></p>
+              <p class="line out">
+                Sistemas web, mobile, APIs REST, integrações e automações.
+              </p>
+              <p class="line"><span class="cmd">$ uptime</span></p>
+              <p class="line out">
+                2013 → hoje em desenvolvimento, suporte, EAD e infraestrutura.
               </p>
             </div>
-            <div class="card-glass rounded-lg p-8">
-              <h3 class="text-2xl font-bold mb-4 text-purple-400">
-                <i class="fas fa-graduation-cap mr-2"></i>
-                Formação Acadêmica
-              </h3>
-              <ul class="text-gray-300 space-y-2">
-                <li><strong>MBA</strong> em Gestão Empresarial</li>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <span class="section-kicker">// sobre</span>
+              <h2>Produto, código e operação no mesmo raciocínio.</h2>
+            </div>
+            <p>
+              Atuação full stack com passagem por suporte, infraestrutura, EAD,
+              sistemas legados, aplicações web e produtos digitais.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <article class="panel reveal">
+              <p>
+                Sou profissional de tecnologia com experiência prática em
+                desenvolvimento full stack, modernização de sistemas,
+                integrações REST, automações e sustentação de plataformas. Gosto
+                de transformar processos confusos em sistemas claros, com fluxo
+                operacional, interface objetiva e backend previsível.
+              </p>
+              <ul class="focus-list">
+                <li>Bacharelado em Ciência da Computação</li>
+                <li>Tecnólogo em Análise e Desenvolvimento de Sistemas.</li>
+                <li>Tecnólogo em Gestão de Tecnologia da Informação.</li>
+              </ul>
+            </article>
+
+            <aside class="panel profile-card reveal">
+              <div class="avatar-ring">
+                <img
+                  src="assets/flavio-about.jpeg"
+                  alt="Foto de Flávio Oliveira trabalhando no notebook"
+                />
+              </div>
+              <h3>Flávio Oliveira</h3>
+              <p>
+                Desenvolvedor Full Stack focado em sistemas web, mobile, APIs e
+                automações para problemas reais.
+              </p>
+              <div class="chips">
+                <span class="chip">React.js</span>
+                <span class="chip">React Native</span>
+                <span class="chip">Next.js</span>
+                <span class="chip">Node</span>
+                <span class="chip">C# / .NET</span>
+                <span class="chip">PHP</span>
+                <span class="chip">Python</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <span class="section-kicker">// projetos</span>
+              <h2>Projetos em destaque no GitHub.</h2>
+            </div>
+            <p>
+              Repositórios pinados no meu perfil público, com foco em produto,
+              automação e terminal.
+            </p>
+          </div>
+
+          <div class="projects">
+            <article class="project-card reveal">
+              <span class="project-meta">open-source / PDV</span>
+              <h3>Hórus PDV</h3>
+              <p>
+                Sistema de frente de caixa modernizado para frontend React e API
+                separada, com vendas, caixa, estoque, usuários, relatórios e
+                smoke test.
+              </p>
+              <div class="chips">
+                <span class="chip">React</span>
+                <span class="chip">.NET</span>
+                <span class="chip">SQL Server</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://flaviooliveira-code.github.io/horus_pdv/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >abrir página →</a
+              >
+            </article>
+
+            <article class="project-card reveal">
+              <span class="project-meta">automação / Python</span>
+              <h3>python</h3>
+              <p>
+                Repositório com automações, integrações e ferramentas em Python
+                para otimização de processos, manipulação de dados e soluções
+                backend.
+              </p>
+              <div class="chips">
+                <span class="chip">Python</span>
+                <span class="chip">Automação</span>
+                <span class="chip">Backend</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/flaviooliveira-code/python"
+                target="_blank"
+                rel="noopener noreferrer"
+                >abrir repo →</a
+              >
+            </article>
+
+            <article class="project-card reveal">
+              <span class="project-meta">terminal / Linux</span>
+              <h3>scripts-linux</h3>
+              <p>
+                Scripts e ferramentas para automação de tarefas em Linux,
+                administração de sistemas, configuração de ambientes e
+                produtividade no terminal.
+              </p>
+              <div class="chips">
+                <span class="chip">Shell</span>
+                <span class="chip">Linux</span>
+                <span class="chip">CLI</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/flaviooliveira-code/scripts-linux"
+                target="_blank"
+                rel="noopener noreferrer"
+                >abrir repo →</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <span class="section-kicker">// habilidades</span>
+              <h2>Stack técnico.</h2>
+            </div>
+            <p>
+              Tecnologias usadas para entregar frontend, backend, dados,
+              automação e infraestrutura.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="panel skill-group reveal">
+              <h3>frontend</h3>
+              <ul>
+                <li>HTML5 / CSS3</li>
+                <li>JavaScript / TypeScript</li>
+                <li>React.js / Next.js</li>
+                <li>Tailwind CSS / Bootstrap</li>
+                <li>Vite</li>
+              </ul>
+            </article>
+
+            <article class="panel skill-group reveal">
+              <h3>backend</h3>
+              <ul>
+                <li>PHP</li>
+                <li>Node.js</li>
+                <li>C# / .NET</li>
+                <li>Python</li>
+                <li>REST APIs</li>
+              </ul>
+            </article>
+
+            <article class="panel skill-group reveal">
+              <h3>mobile</h3>
+              <ul>
+                <li>React Native</li>
+                <li>Interfaces responsivas</li>
+                <li>Fluxos mobile-first</li>
+              </ul>
+            </article>
+
+            <article class="panel skill-group reveal">
+              <h3>dados</h3>
+              <ul>
+                <li>MySQL</li>
+                <li>SQL Server</li>
+                <li>SQL puro</li>
+                <li>Modelagem operacional</li>
+              </ul>
+            </article>
+
+            <article class="panel skill-group reveal">
+              <h3>ferramentas</h3>
+              <ul>
+                <li>Docker / Git / GitHub</li>
+                <li>Selenium</li>
+                <li>Automação com Python</li>
+                <li>Moodle / Linux / macOS</li>
+                <li>Zsh</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <span class="section-kicker">// experiência</span>
+              <h2>Linha do tempo.</h2>
+            </div>
+            <p>
+              Experiência acumulada entre desenvolvimento, infraestrutura,
+              suporte técnico e EAD.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="time">2024-10 → atual</div>
+              <div>
+                <h3>Programador de Software</h3>
+                <div class="company">JLRamos Sistemas</div>
+                <ul>
+                  <li>Modernização de sistemas legados.</li>
+                  <li>Desenvolvimento full stack e aplicações web.</li>
+                  <li>Integrações REST e manutenção evolutiva.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="time">2020 → atual</div>
+              <div>
+                <h3>Desenvolvedor Full Stack Freelancer</h3>
+                <div class="company">Freelancer</div>
+                <ul>
+                  <li>
+                    Sistemas web modernos, landing pages e produtos digitais.
+                  </li>
+                  <li>
+                    Automações, integrações com APIs e projetos personalizados.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="time">2017 → 2024</div>
+              <div>
+                <h3>Responsável Técnico de Sistemas EAD</h3>
+                <div class="company">UNIFIA / UNISEPE</div>
+                <ul>
+                  <li>Administração e suporte de plataformas Moodle.</li>
+                  <li>
+                    Infraestrutura de ensino a distância e suporte técnico
+                    acadêmico.
+                  </li>
+                  <li>Gerenciamento de sistemas educacionais.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="time">2013 → 2016</div>
+              <div>
+                <h3>Técnico em Informática</h3>
+                <div class="company">Diversas experiências</div>
+                <ul>
+                  <li>
+                    Manutenção de computadores, suporte técnico, infraestrutura
+                    de TI e redes.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="time">2009 → 2010</div>
+              <div>
+                <h3>Analista de Redes</h3>
+                <div class="company">Diversas experiências</div>
+                <ul>
+                  <li>
+                    Administração de redes, configuração de equipamentos e
+                    suporte corporativo.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <span class="section-kicker">// formação</span>
+              <h2>Formação, pesquisa e ensino.</h2>
+            </div>
+            <p>
+              Base acadêmica em tecnologia, gestão e produção técnica aplicada.
+            </p>
+          </div>
+
+          <div class="education-grid">
+            <article class="education-card reveal">
+              <h3>Formação acadêmica</h3>
+              <ul class="compact-list">
                 <li>
-                  <strong>Tecnólogo</strong> em Análise e Desenvolvimento de
-                  Sistemas
+                  Bacharelado em Ciência da Computação
+                  <span>Graduação</span>
                 </li>
                 <li>
-                  <strong>Tecnólogo</strong> em Gestão da Tecnologia da
-                  Informação
+                  Análise e Desenvolvimento de Sistemas
+                  <span>Tecnólogo</span>
+                </li>
+                <li>
+                  Gestão de Tecnologia da Informação
+                  <span>Tecnólogo</span>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="mt-12 card-glass rounded-lg p-8">
-            <h3 class="text-2xl font-bold mb-6 text-green-400 text-center">
-              <i class="fas fa-star mr-2"></i>
-              Diferenciais Únicos
-            </h3>
-            <div class="grid md:grid-cols-3 gap-6">
-              <div class="text-center">
-                <i class="fas fa-code text-3xl text-blue-400 mb-4"></i>
-                <h4 class="font-bold mb-2">Full Stack Completo</h4>
-                <p class="text-gray-300 text-sm">
-                  Frontend, Backend, DevOps e Infraestrutura Linux
-                </p>
-              </div>
-              <div class="text-center">
-                <i class="fas fa-cogs text-3xl text-purple-400 mb-4"></i>
-                <h4 class="font-bold mb-2">Automação Expert</h4>
-                <p class="text-gray-300 text-sm">
-                  Scripts, bots e sistemas que aumentam produtividade
-                </p>
-              </div>
-              <div class="text-center">
-                <i
-                  class="fas fa-chalkboard-teacher text-3xl text-green-400 mb-4"
-                ></i>
-                <h4 class="font-bold mb-2">Comunicação Técnica</h4>
-                <p class="text-gray-300 text-sm">Canal YouTube</p>
-              </div>
-            </div>
+            </article>
+
+            <article class="education-card reveal">
+              <h3>Artigos e docência</h3>
+              <ul class="compact-list">
+                <li>
+                  Marketing Digital - O Uso de Tecnologias 3D Integrado ao
+                  Ensino
+                  <span>UNIFIA · 2024</span>
+                </li>
+                <li>
+                  Desenvolvimento de Sistemas Web Modernos
+                  <span>UNIFIA · 2024</span>
+                </li>
+              </ul>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-      <div class="container mx-auto px-4">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="text-4xl font-bold text-center mb-12">
-            <span class="gradient-text animate-gradient-text"
-              >Stack Tecnológico</span
-            >
-          </h2>
-          <div class="grid md:grid-cols-4 gap-8">
-            <div class="card-glass rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-4 text-blue-400">
-                <i class="fas fa-laptop-code mr-2"></i>
-                Frontend
-              </h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >HTML5</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >CSS3</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >JavaScript</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >TypeScript</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >React.js</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Next.js</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Bootstrap</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Tailwind</span
-                >
-              </div>
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <span class="section-kicker">// contato</span>
+              <h2>Minhas conexões.</h2>
             </div>
-            <div class="card-glass rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-4 text-purple-400">
-                <i class="fas fa-server mr-2"></i>
-                Backend
-              </h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >PHP</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Next.js</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Node.js</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Python</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >MySQL</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >APIs RESTful</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Selenium</span
-                >
-              </div>
-            </div>
-            <div class="card-glass rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-4 text-green-400">
-                <i class="fas fa-tools mr-2"></i>
-                DevOps/Infra
-              </h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Linux</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Shell Script</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >XAMP</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Docker</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Git</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >GitHub</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Automação</span
-                >
-              </div>
-            </div>
-            <div class="card-glass rounded-lg p-6">
-              <h3 class="text-xl font-bold mb-4 text-yellow-400">
-                <i class="fas fa-wrench mr-2"></i>
-                Ferramentas
-              </h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Terminal</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >VS Code</span
-                >
-                <span class="tech-badge px-3 py-1 rounded-full text-sm"
-                  >Postman</span
-                >
-              </div>
-            </div>
+            <p>
+              Acompanhe meus projetos, publicações, estudos e evolução
+              profissional pelos canais abaixo.
+            </p>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-800/50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-6xl mx-auto">
-          <h2 class="text-4xl font-bold text-center mb-12">
-            <span class="gradient-text animate-gradient-text"
-              >Projetos em Destaque</span
-            >
-          </h2>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="project-card rounded-lg p-6">
-              <div class="flex items-center mb-4">
-                <i class="fas fa-cash-register text-2xl text-blue-400 mr-3"></i>
-                <h3 class="text-xl font-bold">Horus PDV</h3>
-              </div>
-              <p class="text-gray-300 mb-4">
-                Sistema PDV completo com pipeline de desenvolvimento. Inclui
-                cadastros, relatórios em PDF/Excel, autenticação e sistema de
-                licenciamento.
+          <div class="contact-panel">
+            <article class="panel reveal">
+              <p>
+                Centralizo no GitHub meus projetos open source e estudos
+                práticos. No LinkedIn mantenho minha trajetória profissional, e
+                no Lattes ficam os registros acadêmicos e publicações.
               </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-badge px-2 py-1 rounded text-xs">PHP</span>
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >JavaScript</span
-                >
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >Bootstrap</span
-                >
-                <span class="tech-badge px-2 py-1 rounded text-xs">MySQL</span>
-                <span class="tech-badge px-2 py-1 rounded text-xs">MPDF</span>
-              </div>
-              <a
-                href="https://github.com/oliveiradeflavio/horus_pdv"
-                target="_blank"
-                class="text-blue-400 hover:text-blue-300"
-              >
-                <i class="fab fa-github mr-2"></i>Ver no GitHub
-              </a>
-            </div>
-
-            <div class="project-card rounded-lg p-6">
-              <div class="flex items-center mb-4">
-                <i class="fas fa-file-medical text-2xl text-green-400 mr-3"></i>
-                <h3 class="text-xl font-bold">Prontuário Eletrônico</h3>
-              </div>
-              <p class="text-gray-300 mb-4">
-                Software para gestão de pacientes com agendamentos, anamneses,
-                relatórios e foco total na segurança de dados médicos.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-badge px-2 py-1 rounded text-xs">PHP</span>
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >JavaScript</span
-                >
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >Bootstrap</span
-                >
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >Chart.js</span
-                >
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >PHPMailer</span
-                >
-              </div>
-              <a
-                href="https://github.com/oliveiradeflavio/prontuarioeletronico"
-                target="_blank"
-                class="text-blue-400 hover:text-blue-300"
-              >
-                <i class="fab fa-github mr-2"></i>Ver no GitHub
-              </a>
-            </div>
-
-            <div class="project-card rounded-lg p-6">
-              <div class="flex items-center mb-4">
-                <i class="fas fa-robot text-2xl text-purple-400 mr-3"></i>
-                <h3 class="text-xl font-bold">Bots Python</h3>
-              </div>
-              <p class="text-gray-300 mb-4">
-                Coleção de bots e scripts em Python para automação de tarefas.
-                Telegram, WhatsApp, Instagram e ferramentas úteis.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-badge px-2 py-1 rounded text-xs">Python</span>
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >Selenium</span
-                >
-                <span class="tech-badge px-2 py-1 rounded text-xs">APIs</span>
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >Automação</span
-                >
-              </div>
-              <a
-                href="https://github.com/oliveiradeflavio/python"
-                target="_blank"
-                class="text-blue-400 hover:text-blue-300"
-              >
-                <i class="fab fa-github mr-2"></i>Ver no GitHub
-              </a>
-            </div>
-
-            <div class="project-card rounded-lg p-6">
-              <div class="flex items-center mb-4">
-                <i class="fab fa-linux text-2xl text-yellow-400 mr-3"></i>
-                <h3 class="text-xl font-bold">Scripts Linux</h3>
-              </div>
-              <p class="text-gray-300 mb-4">
-                Scripts Shell para automação de instalação de pacotes
-                essenciais, configuração LAMP, limpeza e backup. Boa adoção na
-                comunidade.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >Shell Script</span
-                >
-                <span class="tech-badge px-2 py-1 rounded text-xs">Bash</span>
-                <span class="tech-badge px-2 py-1 rounded text-xs">Linux</span>
-                <span class="tech-badge px-2 py-1 rounded text-xs"
-                  >Automação</span
-                >
-              </div>
-              <div class="flex space-x-4">
+              <div class="contact-actions">
                 <a
-                  href="https://github.com/oliveiradeflavio/best-packages"
+                  class="btn btn-primary"
+                  href="https://github.com/flaviooliveira-code"
                   target="_blank"
-                  class="text-blue-400 hover:text-blue-300"
+                  rel="noopener noreferrer"
                 >
-                  <i class="fab fa-github mr-2"></i>best-packages
+                  GitHub
                 </a>
                 <a
-                  href="https://github.com/oliveiradeflavio/scripts-linux"
-                  target="_blank"
-                  class="text-blue-400 hover:text-blue-300"
-                >
-                  <i class="fab fa-github mr-2"></i>scripts-linux
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- YouTube Section -->
-    <section id="youtube" class="py-20">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-4xl font-bold text-center mb-12">
-            <span class="gradient-text animate-gradient-text"
-              >Canal YouTube</span
-            >
-          </h2>
-          <div class="card-glass rounded-lg p-8 text-center">
-            <div class="mb-6">
-              <i class="fab fa-youtube text-6xl text-red-500 mb-4"></i>
-              <h3 class="text-2xl font-bold mb-2">@flaviooliveira.dev</h3>
-              <p class="text-gray-300">
-                Canal dedicado a <strong>tecnologia</strong>,
-                <strong>programação</strong> e
-                <strong>projetos práticos</strong> de um desenvolvedor full
-                stack. Aqui você encontra conteúdo autêntico — do código ao
-                cotidiano dev.
-              </p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-6 mb-8">
-              <div class="bg-gray-800/50 rounded-lg p-4">
-                <h4 class="font-bold text-blue-400 mb-2">
-                  <i class="fas fa-code mr-2"></i>
-                  Desenvolvimento & Projetos
-                </h4>
-                <p class="text-gray-300 text-sm">
-                  Compartilho meus projetos, ideias e experiências com
-                  <strong>React.JS, Next.JS, Node.JS </strong> e outras stacks
-                  modernas, sempre com uma pegada prática.
-                </p>
-              </div>
-              <div class="bg-gray-800/50 rounded-lg p-4">
-                <h4 class="font-bold text-green-400 mb-2">
-                  <i class="fab fa-linux mr-2"></i>
-                  Linux & Automação
-                </h4>
-                <p class="text-gray-300 text-sm">
-                  Demonstrações dos bots em Python que crio, scripts Shell para
-                  Linux e dicas para automatizar tarefas do dia a dia como um
-                  desenvolvedor.
-                </p>
-              </div>
-            </div>
-            <div class="flex justify-center">
-              <a
-                href="https://www.youtube.com/channel/UCRPBNcEICRhlKb1IdKfiCxw"
-                target="_blank"
-                class="px-8 py-3 bg-red-600 hover:bg-red-700 rounded-lg transition-colors duration-300 flex items-center gap-2"
-              >
-                <i class="fab fa-youtube"></i>
-                Visitar Canal
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800/50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-4xl font-bold text-center mb-12">
-            <span class="gradient-text animate-gradient-text"
-              >Vamos Conversar</span
-            >
-          </h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="card-glass rounded-lg p-8">
-              <h3 class="text-2xl font-bold mb-6">
-                <i class="fas fa-handshake mr-2 text-blue-400"></i>
-                Conecte-se Comigo
-              </h3>
-              <div class="space-y-4">
-                <a
+                  class="btn"
                   href="https://linkedin.com/in/fladoliveira"
                   target="_blank"
-                  class="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                  rel="noopener noreferrer"
                 >
-                  <i class="fab fa-linkedin text-2xl"></i>
-                  <span>LinkedIn - fladoliveira</span>
+                  LinkedIn
                 </a>
                 <a
-                  href="https://github.com/oliveiradeflavio"
-                  target="_blank"
-                  class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors duration-300"
-                >
-                  <i class="fab fa-github text-2xl"></i>
-                  <span>GitHub - oliveiradeflavio</span>
-                </a>
-                <a
+                  class="btn"
                   href="https://www.youtube.com/channel/UCRPBNcEICRhlKb1IdKfiCxw"
                   target="_blank"
-                  class="flex items-center gap-3 text-red-400 hover:text-red-300 transition-colors duration-300"
+                  rel="noopener noreferrer"
                 >
-                  <i class="fab fa-youtube text-2xl"></i>
-                  <span>YouTube - @flaviooliveira.dev</span>
+                  YouTube
+                </a>
+                <a
+                  class="btn"
+                  href="http://lattes.cnpq.br/5709651219242256"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Currículo Lattes
                 </a>
               </div>
-            </div>
-            <div class="card-glass rounded-lg p-8">
-              <h3 class="text-2xl font-bold mb-6">
-                <i class="fas fa-briefcase mr-2 text-purple-400"></i>
-                Oportunidades
-              </h3>
-              <div class="space-y-4">
-                <div class="flex items-start gap-3">
-                  <i class="fas fa-code text-blue-400 mt-1"></i>
-                  <div>
-                    <h4 class="font-bold">Desenvolvimento Full Stack</h4>
-                    <p class="text-gray-300 text-sm">
-                      Projetos web completos, desde o frontend até a
-                      infraestrutura
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <i class="fas fa-users text-green-400 mt-1"></i>
-                  <div>
-                    <h4 class="font-bold">Liderança Técnica</h4>
-                    <p class="text-gray-300 text-sm">
-                      Gestão de equipes e projetos com visão estratégica
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <i class="fas fa-robot text-purple-400 mt-1"></i>
-                  <div>
-                    <h4 class="font-bold">Automação & DevOps</h4>
-                    <p class="text-gray-300 text-sm">
-                      Scripts, bots e otimização de processos
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            </article>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
-      <div class="container mx-auto px-4">
-        <div class="text-center">
-          <p class="text-gray-400 mb-4">
-            © 2025 Flávio Oliveira - Desenvolvedor Full Stack
-          </p>
-          <div class="flex justify-center space-x-6">
-            <a
-              href="https://linkedin.com/in/fladoliveira"
-              target="_blank"
-              class="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+            <aside
+              class="contact-code reveal"
+              aria-label="Disponibilidade profissional"
             >
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/oliveiradeflavio"
-              target="_blank"
-              class="text-gray-400 hover:text-gray-300 transition-colors duration-300"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCRPBNcEICRhlKb1IdKfiCxw"
-              target="_blank"
-              class="text-gray-400 hover:text-red-400 transition-colors duration-300"
-            >
-              <i class="fab fa-youtube"></i>
-            </a>
+              <p><span class="cmd">const</span> profile = {</p>
+              <p>&nbsp;&nbsp;name: <strong>"Flávio Oliveira"</strong>,</p>
+              <p>
+                &nbsp;&nbsp;role: <strong>"Desenvolvedor Full Stack"</strong>,
+              </p>
+              <p>
+                &nbsp;&nbsp;focus:
+                <strong>["Web", "Mobile", "APIs", "Automação"]</strong>,
+              </p>
+              <p>&nbsp;&nbsp;status: <strong>"aprendizado contínuo"</strong></p>
+              <p>};</p>
+            </aside>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>© 2026 Flávio Oliveira · Desenvolvedor Full Stack</span>
       </div>
     </footer>
 
     <script>
-      // Mobile menu toggle
-      function toggleMobileMenu() {
-        const overlay = document.querySelector(".navbar-overlay");
-        const menu = document.querySelector(".navbar-menu");
+      function animateHeroLetters(selector) {
+        const element = document.querySelector(selector);
+        if (!element) return;
 
-        overlay.classList.toggle("active");
-        menu.classList.toggle("active");
+        const text = element.textContent.trim();
+        element.setAttribute("aria-label", text);
+        element.innerHTML = "";
+
+        Array.from(text).forEach((character, index) => {
+          const letter = document.createElement("span");
+          letter.setAttribute("aria-hidden", "true");
+          letter.className =
+            character === " " ? "hero-letter hero-letter-space" : "hero-letter";
+          letter.style.setProperty("--letter-index", index);
+          letter.textContent = character === " " ? "\u00a0" : character;
+          element.appendChild(letter);
+        });
       }
 
-      // Smooth scrolling for navigation links
+      animateHeroLetters(".hero-name");
+      animateHeroLetters(".hero-title");
+
+      const menuButton = document.querySelector("[data-menu-toggle]");
+      const mobileMenu = document.querySelector("[data-mobile-menu]");
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("is-open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("is-open");
+          menuButton.setAttribute("aria-expanded", "false");
+        });
+      });
+
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
+        anchor.addEventListener("click", (event) => {
+          const target = document.querySelector(anchor.getAttribute("href"));
+          if (!target) return;
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
 
-      // Navbar background on scroll
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector("nav");
-        if (window.scrollY > 50) {
-          navbar.style.backgroundColor = "rgba(15, 23, 42, 0.98)";
-        } else {
-          navbar.style.backgroundColor = "rgba(15, 23, 42, 0.95)";
-        }
-      });
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -80px", threshold: 0.12 },
+      );
 
-      // Add animation to tech badges
-      document.querySelectorAll(".tech-badge").forEach((badge, index) => {
-        badge.style.animationDelay = `${index * 0.1}s`;
-      });
-
-      // Add scroll reveal animation
-      function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <=
-            (window.innerWidth || document.documentElement.clientWidth)
-        );
-      }
-
-      function handleScrollAnimations() {
-        const cards = document.querySelectorAll(".card-glass, .project-card");
-        cards.forEach((card) => {
-          if (isElementInViewport(card)) {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-          }
-        });
-      }
-
-      // Initialize cards as hidden
-      document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll(
-          ".card-glass, .project-card, .tech-badge"
-        );
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("animate-fadeInUp");
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          {
-            threshold: 0.2,
-          }
-        );
-
-        elements.forEach((el) => {
-          el.classList.add("opacity-0");
-          observer.observe(el);
-        });
-      });
-
-      window.addEventListener("scroll", handleScrollAnimations);
+      document
+        .querySelectorAll(".reveal")
+        .forEach((element) => observer.observe(element));
     </script>
   </body>
 </html>
