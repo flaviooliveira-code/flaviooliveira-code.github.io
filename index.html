@@ -581,10 +581,53 @@
       .project-card,
       .timeline-item,
       .education-card {
+        position: relative;
+        overflow: hidden;
         border: 1px solid var(--line-2);
         border-radius: 24px;
         background: var(--panel);
         box-shadow: var(--shadow);
+      }
+
+      .stat-card::after,
+      .skill-group::after,
+      .education-card::after,
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        pointer-events: none;
+        opacity: 0;
+        background: linear-gradient(
+          115deg,
+          transparent 0 32%,
+          rgba(110, 243, 182, 0.16) 45%,
+          rgba(103, 232, 249, 0.18) 52%,
+          transparent 68% 100%
+        );
+        transform: translateX(-42%);
+        transition:
+          opacity 0.28s ease,
+          transform 0.55s ease;
+      }
+
+      .stat-card:hover::after,
+      .skill-group:hover::after,
+      .education-card:hover::after,
+      .timeline-item:hover::after {
+        opacity: 1;
+        transform: translateX(42%);
+      }
+
+      .stat-card:hover,
+      .skill-group:hover,
+      .education-card:hover,
+      .timeline-item:hover {
+        border-color: rgba(110, 243, 182, 0.42);
+        background: rgba(18, 27, 41, 0.94);
+        box-shadow:
+          0 26px 78px rgba(0, 0, 0, 0.38),
+          0 0 0 1px rgba(110, 243, 182, 0.08);
       }
 
       .stat-card {
@@ -593,6 +636,15 @@
         flex-direction: column;
         justify-content: center;
         padding: 18px;
+        transition:
+          transform 0.22s ease,
+          border-color 0.22s ease,
+          background 0.22s ease,
+          box-shadow 0.22s ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-4px);
       }
 
       .stat-card strong {
@@ -802,31 +854,50 @@
         font-size: 12px;
         font-weight: 800;
         padding: 7px 9px;
+        transition:
+          border-color 0.2s ease,
+          background 0.2s ease,
+          color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .project-card:hover .chip,
+      .profile-card:hover .chip,
+      .skill-group:hover .chip {
+        border-color: rgba(110, 243, 182, 0.38);
+        background: rgba(110, 243, 182, 0.1);
+        color: var(--green);
       }
 
       .projects {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 16px;
       }
 
       .project-card {
         display: flex;
-        min-height: 270px;
+        min-height: 292px;
         flex-direction: column;
         justify-content: center;
         padding: 22px;
+        color: inherit;
         transition:
           transform 0.2s ease,
           border-color 0.2s ease,
-          background 0.2s ease;
+          background 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
       .project-card:hover,
-      .project-card:focus-within {
+      .project-card:focus-visible {
         transform: translateY(-5px);
         border-color: rgba(110, 243, 182, 0.46);
         background: rgba(18, 27, 41, 0.94);
+        box-shadow:
+          0 28px 86px rgba(0, 0, 0, 0.42),
+          0 0 0 1px rgba(110, 243, 182, 0.1);
+        outline: none;
       }
 
       .project-meta {
@@ -860,6 +931,12 @@
         font-weight: 850;
       }
 
+      .project-card:hover .project-link,
+      .project-card:focus-visible .project-link {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
       .skills-grid {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -872,6 +949,15 @@
         flex-direction: column;
         justify-content: center;
         padding: 20px;
+        transition:
+          transform 0.22s ease,
+          border-color 0.22s ease,
+          background 0.22s ease,
+          box-shadow 0.22s ease;
+      }
+
+      .skill-group:hover {
+        transform: translateY(-6px);
       }
 
       .skill-group h3 {
@@ -879,6 +965,16 @@
         color: var(--cyan);
         font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
         font-size: 15px;
+        transition:
+          color 0.2s ease,
+          text-shadow 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .skill-group:hover h3 {
+        color: var(--green);
+        text-shadow: 0 0 22px rgba(110, 243, 182, 0.22);
+        transform: translateX(2px);
       }
 
       .skill-group ul {
@@ -890,8 +986,38 @@
       }
 
       .skill-group li {
+        position: relative;
         color: var(--muted);
         font-size: 14px;
+        transition:
+          color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .skill-group li::before {
+        content: "";
+        position: absolute;
+        top: 0.78em;
+        left: -12px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--green);
+        opacity: 0;
+        transform: scale(0.4);
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .skill-group:hover li {
+        color: var(--text);
+        transform: translateX(8px);
+      }
+
+      .skill-group:hover li::before {
+        opacity: 1;
+        transform: scale(1);
       }
 
       .timeline {
@@ -926,6 +1052,15 @@
         flex-direction: column;
         justify-content: center;
         padding: 24px 26px;
+        transition:
+          transform 0.22s ease,
+          border-color 0.22s ease,
+          background 0.22s ease,
+          box-shadow 0.22s ease;
+      }
+
+      .timeline-item:hover {
+        transform: translateY(-4px);
       }
 
       .timeline-item:nth-child(odd) {
@@ -1022,6 +1157,15 @@
         flex-direction: column;
         justify-content: center;
         padding: 22px;
+        transition:
+          transform 0.22s ease,
+          border-color 0.22s ease,
+          background 0.22s ease,
+          box-shadow 0.22s ease;
+      }
+
+      .education-card:hover {
+        transform: translateY(-5px);
       }
 
       .education-card h3 {
@@ -1435,7 +1579,13 @@
           </div>
 
           <div class="projects">
-            <article class="project-card reveal">
+            <a
+              class="project-card reveal"
+              href="https://flaviooliveira-code.github.io/horus_pdv/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir página do projeto Hórus PDV"
+            >
               <span class="project-meta">open-source / PDV</span>
               <h3>Hórus PDV</h3>
               <p>
@@ -1448,16 +1598,38 @@
                 <span class="chip">.NET</span>
                 <span class="chip">SQL Server</span>
               </div>
-              <a
-                class="project-link"
-                href="https://flaviooliveira-code.github.io/horus_pdv/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >abrir página →</a
-              >
-            </article>
+              <span class="project-link">abrir página →</span>
+            </a>
 
-            <article class="project-card reveal">
+            <a
+              class="project-card reveal"
+              href="https://plataformadereservas.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir landing page da Plataforma de Reservas"
+            >
+              <span class="project-meta">produto / hotelaria</span>
+              <h3>Plataforma de Reservas</h3>
+              <p>
+                Sistema de gestão hoteleira em nuvem com reservas, calendário,
+                check-in/check-out, financeiro, caixa, tarifário e operação para
+                hotel, pousada, chalé e pet hotel.
+              </p>
+              <div class="chips">
+                <span class="chip">Next.js</span>
+                <span class="chip">Node</span>
+                <span class="chip">PMS</span>
+              </div>
+              <span class="project-link">abrir página →</span>
+            </a>
+
+            <a
+              class="project-card reveal"
+              href="https://github.com/flaviooliveira-code/python"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir repositório Python no GitHub"
+            >
               <span class="project-meta">automação / Python</span>
               <h3>python</h3>
               <p>
@@ -1470,16 +1642,16 @@
                 <span class="chip">Automação</span>
                 <span class="chip">Backend</span>
               </div>
-              <a
-                class="project-link"
-                href="https://github.com/flaviooliveira-code/python"
-                target="_blank"
-                rel="noopener noreferrer"
-                >abrir repo →</a
-              >
-            </article>
+              <span class="project-link">abrir repo →</span>
+            </a>
 
-            <article class="project-card reveal">
+            <a
+              class="project-card reveal"
+              href="https://github.com/flaviooliveira-code/scripts-linux"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir repositório scripts-linux no GitHub"
+            >
               <span class="project-meta">terminal / Linux</span>
               <h3>scripts-linux</h3>
               <p>
@@ -1492,14 +1664,8 @@
                 <span class="chip">Linux</span>
                 <span class="chip">CLI</span>
               </div>
-              <a
-                class="project-link"
-                href="https://github.com/flaviooliveira-code/scripts-linux"
-                target="_blank"
-                rel="noopener noreferrer"
-                >abrir repo →</a
-              >
-            </article>
+              <span class="project-link">abrir repo →</span>
+            </a>
           </div>
         </div>
       </section>
