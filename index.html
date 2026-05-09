@@ -258,6 +258,11 @@
         text-decoration: none;
       }
 
+      site-navbar,
+      site-footer {
+        display: block;
+      }
+
       button,
       input {
         font: inherit;
@@ -473,6 +478,11 @@
       .hero-title {
         display: inline-block;
         color: var(--text);
+      }
+
+      .hero-title-part {
+        display: inline-block;
+        white-space: nowrap;
       }
 
       .hero-letter {
@@ -995,6 +1005,7 @@
         min-height: 230px;
         flex-direction: column;
         justify-content: center;
+        overflow: visible;
         padding: 24px 26px;
       }
 
@@ -1027,12 +1038,12 @@
       }
 
       .timeline-item:nth-child(odd)::before {
-        right: calc(-8.695% - 13px);
+        right: -8.695%;
         transform: translate(50%, -50%);
       }
 
       .timeline-item:nth-child(even)::before {
-        left: calc(-8.695% - 13px);
+        left: -8.695%;
         transform: translate(-50%, -50%);
       }
 
@@ -1256,6 +1267,10 @@
           letter-spacing: -0.065em;
         }
 
+        .hero-title-part {
+          display: block;
+        }
+
         .stats,
         .projects,
         .skills-grid {
@@ -1294,55 +1309,12 @@
         }
       }
     </style>
+      <script src="assets/site-components.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="topbar">
-      <div class="container">
-        <nav class="nav" aria-label="Navegação principal">
-          <a
-            class="brand"
-            href="#home"
-            aria-label="Página inicial de Flávio Oliveira"
-          >
-            <span class="prompt-mark" aria-hidden="true">~/</span>
-            <span>
-              Flávio Oliveira
-              <small>full-stack.dev</small>
-            </span>
-          </a>
-
-          <div class="nav-links">
-            <a href="#about">// sobre</a>
-            <a href="#projects">// projetos</a>
-            <a href="#skills">// habilidades</a>
-            <a href="#experience">// experiência</a>
-            <a href="#contact">// contato</a>
-          </div>
-
-          <button
-            class="mobile-toggle"
-            type="button"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-            data-menu-toggle
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </nav>
-
-        <div class="mobile-panel" data-mobile-menu>
-          <a href="#about">// sobre</a>
-          <a href="#projects">// projetos</a>
-          <a href="#skills">// habilidades</a>
-          <a href="#experience">// experiência</a>
-          <a href="#contact">// contato</a>
-        </div>
-      </div>
-    </header>
+    <site-navbar depth="0"></site-navbar>
 
     <main id="conteudo">
       <section class="hero" id="home">
@@ -1350,7 +1322,10 @@
           <div>
             <h1>
               <span class="hero-name">Flávio</span><br />
-              <span class="hero-title">Desenvolvedor Full Stack</span>
+              <span class="hero-title" aria-label="Desenvolvedor Full Stack">
+                <span class="hero-title-part">Desenvolvedor</span>
+                <span class="hero-title-part">Full Stack</span>
+              </span>
             </h1>
             <p class="subtitle">
               10+ anos construindo, modernizando e mantendo sistemas web, APIs
@@ -1679,7 +1654,7 @@
 
           <div class="timeline">
             <article class="timeline-item reveal">
-              <div class="time">2024-10 → atual</div>
+              <div class="time">2024 → atual</div>
               <div>
                 <h3>Programador de Software</h3>
                 <div class="company">JLRamos Sistemas</div>
@@ -1727,7 +1702,7 @@
               <div class="time">2013 → 2016</div>
               <div>
                 <h3>Técnico em Informática</h3>
-                <div class="company">Diversas experiências</div>
+                <div class="company">Black Hill Informática</div>
                 <ul>
                   <li>
                     Manutenção de computadores, suporte técnico, infraestrutura
@@ -1741,7 +1716,7 @@
               <div class="time">2009 → 2010</div>
               <div>
                 <h3>Analista de Redes</h3>
-                <div class="company">Diversas experiências</div>
+                <div class="company">NET Internet e Comunicações</div>
                 <ul>
                   <li>
                     Administração de redes, configuração de equipamentos e
@@ -1880,17 +1855,16 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-inner">
-        <span>© 2026 Flávio Oliveira · Desenvolvedor Full Stack</span>
-      </div>
-    </footer>
+    <site-footer></site-footer>
 
     <script>
       function animateHeroLetters(selector) {
         const element = document.querySelector(selector);
         if (!element) return;
+        animateHeroLettersElement(element);
+      }
 
+      function animateHeroLettersElement(element) {
         const text = element.textContent.trim();
         element.innerHTML = "";
 
@@ -1911,22 +1885,10 @@
       }
 
       animateHeroLetters(".hero-name");
-      animateHeroLetters(".hero-title");
+      document
+        .querySelectorAll(".hero-title-part")
+        .forEach((element) => animateHeroLettersElement(element));
 
-      const menuButton = document.querySelector("[data-menu-toggle]");
-      const mobileMenu = document.querySelector("[data-mobile-menu]");
-
-      menuButton.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("is-open");
-        menuButton.setAttribute("aria-expanded", String(isOpen));
-      });
-
-      mobileMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.remove("is-open");
-          menuButton.setAttribute("aria-expanded", "false");
-        });
-      });
 
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", (event) => {

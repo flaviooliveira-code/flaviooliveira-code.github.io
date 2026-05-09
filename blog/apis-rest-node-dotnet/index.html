@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>APIs REST com Node.js e .NET | Flávio Oliveira</title>
+    <meta
+      name="description"
+      content="Boas práticas para APIs REST com Node.js e .NET: contratos claros, autenticação, validação, logs, segurança e integração com frontend."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://flaviooliveira-code.github.io/blog/apis-rest-node-dotnet/" />
+    <meta property="og:title" content="APIs REST com Node.js e .NET" />
+    <meta
+      property="og:description"
+      content="Como criar APIs previsíveis para sistemas web, produtos digitais e integrações."
+    />
+    <meta property="og:url" content="https://flaviooliveira-code.github.io/blog/apis-rest-node-dotnet/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://flaviooliveira-code.github.io/blog/images/apis-rest.svg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="article:published_time" content="2026-05-09" />
+    <meta property="article:modified_time" content="2026-05-09" />
+    <meta property="article:author" content="https://flaviooliveira-code.github.io/" />
+    <meta property="article:section" content="Backend" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="APIs REST com Node.js e .NET" />
+    <meta
+      name="twitter:description"
+      content="Boas práticas para APIs REST com Node.js e .NET: contratos claros, autenticação, validação, logs, segurança e integração com frontend."
+    />
+    <meta name="twitter:image" content="https://flaviooliveira-code.github.io/blog/images/apis-rest.svg" />
+    <script type="application/ld+json">
+      {
+            "@context": "https://schema.org",
+            "@graph": [
+                  {
+                        "@type": "BlogPosting",
+                        "@id": "https://flaviooliveira-code.github.io/blog/apis-rest-node-dotnet/#article",
+                        "url": "https://flaviooliveira-code.github.io/blog/apis-rest-node-dotnet/",
+                        "headline": "APIs REST com Node.js e .NET para sistemas conectados.",
+                        "description": "Boas práticas para APIs REST com Node.js e .NET: contratos claros, autenticação, validação, logs, segurança e integração com frontend.",
+                        "image": "https://flaviooliveira-code.github.io/blog/images/apis-rest.svg",
+                        "datePublished": "2026-05-09",
+                        "dateModified": "2026-05-09",
+                        "inLanguage": "pt-BR",
+                        "articleSection": "Backend",
+                        "author": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "publisher": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "isPartOf": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/#blog"
+                        },
+                        "mainEntityOfPage": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/apis-rest-node-dotnet/"
+                        }
+                  },
+                  {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://flaviooliveira-code.github.io/blog/apis-rest-node-dotnet/#breadcrumb",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Início",
+                                    "item": "https://flaviooliveira-code.github.io/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://flaviooliveira-code.github.io/blog/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "APIs REST com Node.js e .NET",
+                                    "item": "https://flaviooliveira-code.github.io/blog/apis-rest-node-dotnet/"
+                              }
+                        ]
+                  },
+                  {
+                        "@type": "Person",
+                        "@id": "https://flaviooliveira-code.github.io/#person",
+                        "name": "Flávio Oliveira",
+                        "url": "https://flaviooliveira-code.github.io/",
+                        "sameAs": [
+                              "https://github.com/flaviooliveira-code",
+                              "https://linkedin.com/in/fladoliveira",
+                              "https://www.youtube.com/@flaviooliveira-dev",
+                              "http://lattes.cnpq.br/5709651219242256"
+                        ]
+                  }
+            ]
+      }
+    </script>
+    <meta name="theme-color" content="#05070b" />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+      <script src="../../assets/site-components.js"></script>
+  </head>
+  <body>
+    <site-navbar depth="2"></site-navbar>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <a class="back-link" href="../">← voltar para o blog</a>
+          <p class="kicker">// backend / integrações</p>
+          <h1>APIs REST com Node.js e .NET para sistemas conectados.</h1>
+          <p class="lead">
+            Uma API boa reduz acoplamento, deixa a regra de negócio mais clara e
+            permite que frontend, integrações e relatórios evoluam com segurança.
+          </p>
+        </div>
+      </section>
+
+      <article class="article-shell">
+        <p>
+          Node.js e .NET são boas escolhas para APIs REST, cada um com seus
+          pontos fortes. Node é direto para produtos JavaScript/TypeScript,
+          integrações e entregas rápidas. .NET é muito forte para APIs
+          estruturadas, regras de negócio, validação e integração com ambientes
+          corporativos.
+        </p>
+
+        <h2>Contrato vem antes da tela</h2>
+        <p>
+          Quando a API tem contratos previsíveis, o frontend trabalha melhor.
+          Endpoints precisam ter nomes claros, status HTTP coerentes, payloads
+          consistentes e erros que ajudem o usuário ou o desenvolvedor a entender
+          o que aconteceu.
+        </p>
+
+        <p>
+          Eu gosto de pensar no contrato como uma promessa entre backend e
+          frontend. Se a tela de produtos espera paginação, filtros e mensagens
+          padronizadas, a API precisa entregar isso sempre do mesmo jeito. Quando
+          cada rota responde em um formato diferente, o frontend vira um conjunto
+          de exceções e o usuário sente essa falta de padrão em loading, erro e
+          confirmação.
+        </p>
+
+        <ul>
+          <li><strong>GET</strong> para consulta e filtros.</li>
+          <li><strong>POST</strong> para criação e comandos de negócio.</li>
+          <li><strong>PUT/PATCH</strong> para atualização controlada.</li>
+          <li><strong>DELETE</strong> quando a regra permite exclusão real.</li>
+        </ul>
+
+        <h2>Padronizar resposta evita gambiarra no frontend</h2>
+        <p>
+          Em APIs de produto, costumo manter um formato claro para sucesso,
+          paginação e erro. Isso facilita criar serviços reutilizáveis no React e
+          reduz duplicação de tratamento em cada página. Um erro de validação, por
+          exemplo, precisa informar campo, mensagem e contexto suficiente para a
+          interface orientar o usuário.
+        </p>
+
+        <div class="terminal">
+          <span>$ resposta-padrao</span><br />
+          data + meta.paginacao + errors[] + requestId
+        </div>
+
+        <h2>Segurança precisa estar na base</h2>
+        <p>
+          Autenticação, autorização, expiração de token, limitação de tentativas,
+          validação de entrada e logs são parte da API, não detalhes para depois.
+          Um endpoint público sem validação ou uma rota administrativa sem
+          permissão correta podem comprometer o sistema inteiro.
+        </p>
+
+        <div class="callout">
+          <strong>Boa API:</strong> valida no backend mesmo quando o frontend já
+          valida. Interface melhora experiência; backend protege regra e dados.
+        </div>
+
+        <h2>Validação de negócio não é só validação de campo</h2>
+        <p>
+          Validar e-mail, CPF, CNPJ ou tamanho de texto é apenas o começo. A
+          camada de negócio precisa impedir ações inválidas mesmo quando o
+          payload está bem formado. Em um PDV, por exemplo, não basta receber
+          produto e quantidade. A API precisa verificar estoque, caixa aberto,
+          permissão do usuário, forma de pagamento e consistência do total.
+        </p>
+
+        <p>
+          Esse é um ponto em que muita aplicação quebra: a tela bloqueia uma ação,
+          mas a API aceita a mesma operação se alguém chamar o endpoint
+          diretamente. Por isso, frontend deve melhorar experiência; backend deve
+          ser a fonte da verdade.
+        </p>
+
+        <h2>Logs, erros e observabilidade</h2>
+        <p>
+          Sistemas reais falham. A diferença está em conseguir diagnosticar. Logs
+          estruturados, identificadores de requisição e mensagens de erro
+          padronizadas ajudam muito em produção. Em fluxos críticos, como caixa,
+          vendas, reservas ou financeiro, isso deixa a manutenção mais segura.
+        </p>
+
+        <p>
+          Um bom log não precisa vazar dado sensível. Ele precisa dizer qual rota
+          falhou, qual usuário executou a ação, qual identificador de requisição
+          acompanhou o fluxo e qual regra impediu a operação. Com isso, suporte e
+          desenvolvimento conseguem investigar sem depender apenas de prints ou
+          relatos incompletos.
+        </p>
+
+        <div class="terminal">
+          <span>$ api --checklist</span><br />
+          contrato → validação → autenticação → autorização → logs → testes
+        </div>
+
+        <h2>Integração com React</h2>
+        <p>
+          No frontend, uma API clara permite criar serviços pequenos, hooks de
+          carregamento, feedback visual e tratamento de erros consistente. A
+          experiência do usuário melhora porque cada ação tem resposta previsível:
+          salvar, editar, excluir, filtrar ou gerar relatório.
+        </p>
+
+        <h2>Node.js ou .NET: a decisão depende do contexto</h2>
+        <p>
+          Não vejo a escolha entre Node.js e .NET como disputa simples. Node.js
+          costuma encaixar muito bem quando o time já trabalha forte com
+          TypeScript, integrações e ciclos rápidos. .NET entrega uma base muito
+          sólida para aplicações empresariais, tipagem forte, organização por
+          camadas e integração com SQL Server. Em projetos reais, o mais
+          importante é escolher uma stack que o time consiga manter com clareza.
+        </p>
+
+        <p>
+          Independente da tecnologia, os critérios continuam os mesmos:
+          contrato estável, regra protegida, autenticação segura, testes de fluxo
+          e documentação mínima para quem vai consumir a API.
+        </p>
+
+        <h2>Documentação mínima já ajuda muito</h2>
+        <p>
+          Não é necessário esperar uma documentação enorme para melhorar a vida do
+          time. Uma coleção de requisições, exemplos de payload, status esperados
+          e regras principais já evitam ruído. Em APIs consumidas por frontend, eu
+          considero essencial documentar filtros, ordenação, paginação e mensagens
+          de erro.
+        </p>
+
+        <p>
+          Essa documentação também ajuda no onboarding. Quem chega no projeto
+          entende mais rápido quais endpoints existem, quais são públicos, quais
+          exigem token e quais regras não podem ser violadas.
+        </p>
+
+        <div class="related-grid">
+          <a class="pill-link" href="../desenvolvimento-react-nextjs/">React e Next.js</a>
+          <a class="pill-link" href="../modernizacao-de-sistemas-legados/">Sistemas legados</a>
+          <a class="pill-link" href="../horus-pdv/">Hórus PDV</a>
+        </div>
+      </article>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

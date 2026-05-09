@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hórus PDV | Modernização de Frente de Caixa</title>
+    <meta
+      name="description"
+      content="Hórus PDV é um projeto de modernização de frente de caixa com React, API .NET, SQL Server, vendas, estoque, caixa e testes."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://flaviooliveira-code.github.io/blog/horus-pdv/" />
+    <meta property="og:title" content="Hórus PDV" />
+    <meta
+      property="og:description"
+      content="Modernização de um sistema PDV com frontend React, API .NET e SQL Server."
+    />
+    <meta property="og:url" content="https://flaviooliveira-code.github.io/blog/horus-pdv/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://flaviooliveira-code.github.io/blog/images/horus-pdv.svg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="article:published_time" content="2026-05-09" />
+    <meta property="article:modified_time" content="2026-05-09" />
+    <meta property="article:author" content="https://flaviooliveira-code.github.io/" />
+    <meta property="article:section" content="Produtos Digitais" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hórus PDV" />
+    <meta
+      name="twitter:description"
+      content="Hórus PDV é um projeto de modernização de frente de caixa com React, API .NET, SQL Server, vendas, estoque, caixa e testes."
+    />
+    <meta name="twitter:image" content="https://flaviooliveira-code.github.io/blog/images/horus-pdv.svg" />
+    <script type="application/ld+json">
+      {
+            "@context": "https://schema.org",
+            "@graph": [
+                  {
+                        "@type": "BlogPosting",
+                        "@id": "https://flaviooliveira-code.github.io/blog/horus-pdv/#article",
+                        "url": "https://flaviooliveira-code.github.io/blog/horus-pdv/",
+                        "headline": "Hórus PDV: modernização de uma frente de caixa.",
+                        "description": "Hórus PDV é um projeto de modernização de frente de caixa com React, API .NET, SQL Server, vendas, estoque, caixa e testes.",
+                        "image": "https://flaviooliveira-code.github.io/blog/images/horus-pdv.svg",
+                        "datePublished": "2026-05-09",
+                        "dateModified": "2026-05-09",
+                        "inLanguage": "pt-BR",
+                        "articleSection": "Produtos Digitais",
+                        "author": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "publisher": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "isPartOf": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/#blog"
+                        },
+                        "mainEntityOfPage": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/horus-pdv/"
+                        }
+                  },
+                  {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://flaviooliveira-code.github.io/blog/horus-pdv/#breadcrumb",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Início",
+                                    "item": "https://flaviooliveira-code.github.io/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://flaviooliveira-code.github.io/blog/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Hórus PDV",
+                                    "item": "https://flaviooliveira-code.github.io/blog/horus-pdv/"
+                              }
+                        ]
+                  },
+                  {
+                        "@type": "Person",
+                        "@id": "https://flaviooliveira-code.github.io/#person",
+                        "name": "Flávio Oliveira",
+                        "url": "https://flaviooliveira-code.github.io/",
+                        "sameAs": [
+                              "https://github.com/flaviooliveira-code",
+                              "https://linkedin.com/in/fladoliveira",
+                              "https://www.youtube.com/@flaviooliveira-dev",
+                              "http://lattes.cnpq.br/5709651219242256"
+                        ]
+                  }
+            ]
+      }
+    </script>
+    <meta name="theme-color" content="#05070b" />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+      <script src="../../assets/site-components.js"></script>
+  </head>
+  <body>
+    <site-navbar depth="2"></site-navbar>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <a class="back-link" href="../">← voltar para o blog</a>
+          <p class="kicker">// produto / PDV</p>
+          <h1>Hórus PDV: modernização de uma frente de caixa.</h1>
+          <p class="lead">
+            Um projeto para transformar um sistema PDV em uma base moderna, com
+            frontend React, API separada, banco SQL Server e fluxo operacional.
+          </p>
+        </div>
+      </section>
+
+      <article class="article-shell">
+        <p>
+          O Hórus PDV representa bem um desafio comum: modernizar um sistema que
+          precisa continuar pensando em operação real. Um PDV não pode ser apenas
+          bonito. Ele precisa abrir caixa, vender, baixar estoque, registrar
+          histórico, lidar com usuários, imprimir comprovantes e proteger regras
+          de negócio.
+        </p>
+
+        <h2>Frontend para operação rápida</h2>
+        <p>
+          A frente de caixa exige pouca fricção. Botões precisam ser claros,
+          produtos precisam aparecer com rapidez, pagamentos precisam orientar o
+          operador e mensagens de erro devem explicar o próximo passo. React ajuda
+          a organizar essa experiência com componentes, estados e telas
+          reutilizáveis.
+        </p>
+
+        <p>
+          No balcão, cada segundo importa. O operador não pode depender de telas
+          confusas, campos pequenos ou ações escondidas. A experiência precisa
+          favorecer leitura rápida: produto, quantidade, preço, desconto, subtotal,
+          forma de pagamento e status do caixa. Quando a interface deixa esses
+          pontos evidentes, ela reduz erro operacional e acelera atendimento.
+        </p>
+
+        <h2>Regra de caixa é regra de negócio</h2>
+        <p>
+          Uma das regras mais importantes em um PDV é impedir venda sem caixa
+          aberto. Parece simples, mas esse tipo de decisão não deve ficar apenas
+          no botão do frontend. A tela pode bloquear o fluxo e orientar o usuário,
+          mas a API precisa confirmar a regra antes de registrar a venda. Isso
+          evita inconsistência quando uma requisição é refeita, quando há múltiplas
+          abas abertas ou quando alguém tenta chamar o endpoint diretamente.
+        </p>
+
+        <div class="terminal">
+          <span>$ venda --validar</span><br />
+          usuário autenticado → caixa aberto → estoque suficiente → pagamento →
+          baixa de estoque
+        </div>
+
+        <h2>API separada para proteger regra</h2>
+        <p>
+          Ao separar a API, regras como abertura de caixa, fechamento, baixa de
+          estoque, venda e histórico deixam de depender apenas da tela. Isso
+          melhora segurança, facilita testes e permite que outros módulos
+          conversem com o sistema de forma previsível.
+        </p>
+
+        <ul>
+          <li>Cadastro e edição de produtos, clientes e fornecedores.</li>
+          <li>Controle de estoque e inventário.</li>
+          <li>Abertura e fechamento de caixa.</li>
+          <li>Histórico de vendas e impressão de comprovante.</li>
+          <li>Configurações e dados da empresa.</li>
+        </ul>
+
+        <h2>Estoque precisa conversar com venda</h2>
+        <p>
+          Em sistema de frente de caixa, estoque não pode ser um módulo isolado.
+          Quando uma venda é confirmada, a quantidade precisa baixar. Quando uma
+          devolução acontece, a regra precisa decidir se o item volta para estoque
+          ou se entra como perda, troca ou ajuste. Esses detalhes parecem
+          operacionais, mas são fundamentais para relatório e compra futura.
+        </p>
+
+        <p>
+          Também é importante registrar histórico. Saber que o estoque mudou é
+          pouco; o sistema precisa indicar por qual motivo mudou, quem executou a
+          ação e qual venda, compra ou ajuste originou aquela movimentação. Esse
+          rastreio é o que transforma o módulo em ferramenta de gestão.
+        </p>
+
+        <h2>Banco e testes importam no MVP</h2>
+        <p>
+          Mesmo em MVP, um PDV precisa ter dados consistentes. Por isso, SQL
+          Server, scripts de banco e smoke tests ajudam a garantir que criar,
+          editar, excluir, vender e consultar funcionem de ponta a ponta. Isso
+          reduz regressões enquanto o produto evolui.
+        </p>
+
+        <p>
+          Para mim, MVP não significa descuidar das regras centrais. Significa
+          entregar o menor conjunto que já opera com consistência. No caso do
+          Hórus PDV, isso passa por autenticação, empresa, produtos, clientes,
+          fornecedores, caixa, venda, estoque, histórico e configurações. Sem esse
+          núcleo, a interface pode parecer pronta, mas ainda não sustenta uso real.
+        </p>
+
+        <div class="terminal">
+          <span>$ horus-pdv --fluxo</span><br />
+          login → abrir caixa → selecionar produto → vender → baixar estoque → histórico
+        </div>
+
+        <h2>Comprovante e reimpressão fazem parte da experiência</h2>
+        <p>
+          Mesmo sem impressora fiscal conectada no ambiente de desenvolvimento, a
+          prévia de impressão ajuda a validar conteúdo e ordem das informações:
+          dados da empresa, itens, quantidade, valor unitário, total, forma de
+          pagamento, operador e data. A reimpressão da última venda também é uma
+          necessidade prática, porque comprovante pode falhar, cliente pode pedir
+          segunda via ou o operador pode precisar conferir o fechamento.
+        </p>
+
+        <h2>Configuração precisa ser simples para loja pequena</h2>
+        <p>
+          Um PDV não pode exigir conhecimento técnico para operar preferências
+          básicas. Dados da empresa, impressão, e-mail, tema, caixa, usuários e
+          permissões precisam ficar em telas compreensíveis. Quanto mais simples a
+          configuração inicial, menor a barreira para o sistema sair do teste e
+          entrar em operação.
+        </p>
+
+        <p>
+          Essa simplicidade não significa remover controle. Significa nomear as
+          opções de forma clara, mostrar feedback ao salvar e evitar que o usuário
+          precise entender termos técnicos para decidir como quer usar o sistema.
+        </p>
+
+        <h2>O aprendizado principal</h2>
+        <p>
+          Sistemas de venda exigem equilíbrio entre UX e regra. Não adianta uma
+          tela bonita que deixa vender sem caixa aberto, nem uma API completa que
+          trava o operador. O produto precisa respeitar o balcão, o estoque e o
+          fechamento financeiro.
+        </p>
+
+        <div class="related-grid">
+          <a class="pill-link" href="https://flaviooliveira-code.github.io/horus_pdv/" target="_blank" rel="noopener noreferrer">Ver página do Hórus PDV</a>
+          <a class="pill-link" href="../apis-rest-node-dotnet/">APIs REST</a>
+          <a class="pill-link" href="../modernizacao-de-sistemas-legados/">Modernização</a>
+        </div>
+      </article>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

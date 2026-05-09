@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Automações Python | Flávio Oliveira</title>
+    <meta
+      name="description"
+      content="Como pensar automações com Python para navegador, pesquisas, mensagens e rotinas repetitivas usando controle, logs e responsabilidade."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://flaviooliveira-code.github.io/blog/automacoes-python/" />
+    <meta property="og:title" content="Automações Python" />
+    <meta
+      property="og:description"
+      content="Do script rápido ao fluxo confiável: uma visão prática sobre automação com Python."
+    />
+    <meta property="og:url" content="https://flaviooliveira-code.github.io/blog/automacoes-python/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://flaviooliveira-code.github.io/blog/images/automacoes-python.svg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="article:published_time" content="2026-05-09" />
+    <meta property="article:modified_time" content="2026-05-09" />
+    <meta property="article:author" content="https://flaviooliveira-code.github.io/" />
+    <meta property="article:section" content="Automação" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Automações Python" />
+    <meta
+      name="twitter:description"
+      content="Como pensar automações com Python para navegador, pesquisas, mensagens e rotinas repetitivas usando controle, logs e responsabilidade."
+    />
+    <meta name="twitter:image" content="https://flaviooliveira-code.github.io/blog/images/automacoes-python.svg" />
+    <script type="application/ld+json">
+      {
+            "@context": "https://schema.org",
+            "@graph": [
+                  {
+                        "@type": "BlogPosting",
+                        "@id": "https://flaviooliveira-code.github.io/blog/automacoes-python/#article",
+                        "url": "https://flaviooliveira-code.github.io/blog/automacoes-python/",
+                        "headline": "Automações Python: do script útil ao fluxo confiável.",
+                        "description": "Como pensar automações com Python para navegador, pesquisas, mensagens e rotinas repetitivas usando controle, logs e responsabilidade.",
+                        "image": "https://flaviooliveira-code.github.io/blog/images/automacoes-python.svg",
+                        "datePublished": "2026-05-09",
+                        "dateModified": "2026-05-09",
+                        "inLanguage": "pt-BR",
+                        "articleSection": "Automação",
+                        "author": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "publisher": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "isPartOf": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/#blog"
+                        },
+                        "mainEntityOfPage": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/automacoes-python/"
+                        }
+                  },
+                  {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://flaviooliveira-code.github.io/blog/automacoes-python/#breadcrumb",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Início",
+                                    "item": "https://flaviooliveira-code.github.io/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://flaviooliveira-code.github.io/blog/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Automações Python",
+                                    "item": "https://flaviooliveira-code.github.io/blog/automacoes-python/"
+                              }
+                        ]
+                  },
+                  {
+                        "@type": "Person",
+                        "@id": "https://flaviooliveira-code.github.io/#person",
+                        "name": "Flávio Oliveira",
+                        "url": "https://flaviooliveira-code.github.io/",
+                        "sameAs": [
+                              "https://github.com/flaviooliveira-code",
+                              "https://linkedin.com/in/fladoliveira",
+                              "https://www.youtube.com/@flaviooliveira-dev",
+                              "http://lattes.cnpq.br/5709651219242256"
+                        ]
+                  }
+            ]
+      }
+    </script>
+    <meta name="theme-color" content="#05070b" />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+      <script src="../../assets/site-components.js"></script>
+  </head>
+  <body>
+    <site-navbar depth="2"></site-navbar>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <a class="back-link" href="../">← voltar para o blog</a>
+          <p class="kicker">// python / automação</p>
+          <h1>Automações Python: do script útil ao fluxo confiável.</h1>
+          <p class="lead">
+            Automação boa não é apenas fazer o computador clicar sozinho. É
+            transformar uma tarefa repetitiva em um fluxo previsível, controlado
+            e fácil de manter.
+          </p>
+        </div>
+      </section>
+
+      <article class="article-shell">
+        <p>
+          No meu canal do YouTube, os temas de automação aparecem de forma
+          prática: pesquisas no Google com Python, uso de proxy e looping, envio
+          de mensagens, bots e experimentos com rotinas de navegador. Esses
+          exemplos são úteis porque mostram uma coisa importante: automação nasce
+          de um problema simples, mas precisa de cuidado para virar ferramenta.
+        </p>
+
+        <h2>O primeiro passo é descrever a rotina</h2>
+        <p>
+          Antes de abrir o editor, eu gosto de escrever a rotina em linguagem
+          simples: onde começa, quais campos são preenchidos, quais botões são
+          acionados, quais respostas precisam ser lidas e o que acontece quando
+          algo dá errado. Isso evita criar scripts frágeis, dependentes de tempo
+          fixo ou de cliques sem validação.
+        </p>
+
+        <p>
+          Esse mapeamento também ajuda a descobrir se automação é mesmo a melhor
+          resposta. Às vezes o caminho correto é consumir uma API, importar uma
+          planilha, criar uma integração ou melhorar uma tela interna. Automação
+          de navegador é útil, mas não deve ser a primeira opção quando existe um
+          caminho oficial, estável e mais seguro para executar a mesma tarefa.
+        </p>
+
+        <div class="terminal">
+          <span>$ mapear-rotina</span><br />
+          origem dos dados → ação repetitiva → validação → erro esperado →
+          resultado final
+        </div>
+
+        <h2>Automação de navegador pede espera, seletor e limite</h2>
+        <p>
+          Em automações web, o ponto central não é só encontrar um elemento. É
+          esperar a página estar pronta, escolher seletores estáveis, tratar
+          variações e respeitar limites. Loops, proxies e envio de mensagens
+          precisam ser usados com responsabilidade, considerando termos de uso,
+          privacidade e impacto no serviço acessado.
+        </p>
+        <ul>
+          <li>Use esperas explícitas em vez de pausas aleatórias.</li>
+          <li>Registre logs para saber onde o fluxo parou.</li>
+          <li>Tenha limites de execução e mecanismos de parada.</li>
+          <li>Evite automações invasivas ou que violem regras da plataforma.</li>
+        </ul>
+
+        <h2>Idempotência evita duplicação</h2>
+        <p>
+          Uma automação confiável precisa saber se uma ação já foi executada. Se
+          o script roda duas vezes, ele não deveria cadastrar o mesmo registro,
+          enviar a mesma mensagem ou processar o mesmo item sem perceber. Esse
+          cuidado se chama idempotência na prática: repetir a execução não pode
+          destruir a consistência do processo.
+        </p>
+
+        <p>
+          Em uma rotina de envio, por exemplo, vale salvar um identificador de
+          mensagem enviada. Em uma rotina de planilha, vale marcar linhas
+          processadas. Em uma integração, vale registrar o protocolo retornado
+          pela API. Sem esse tipo de controle, o script funciona em teste, mas
+          vira risco quando entra no dia a dia.
+        </p>
+
+        <div class="callout">
+          <strong>Automação responsável:</strong> o objetivo deve ser reduzir
+          trabalho repetitivo e integrar processos, não burlar plataformas ou
+          gerar comportamento abusivo.
+        </div>
+
+        <h2>Quando usar Python</h2>
+        <p>
+          Python é excelente para automações porque permite começar simples e
+          evoluir. Um script pode ler uma planilha, acessar uma página, chamar
+          uma API, gerar um relatório e enviar um alerta. Com o tempo, esse
+          script pode ganhar configuração, logs, tratamento de exceção e até uma
+          interface web ou job agendado.
+        </p>
+
+        <p>
+          O ponto forte do Python é a combinação de simplicidade com ecossistema.
+          Bibliotecas para HTTP, arquivos, navegador, dados e automação tornam o
+          começo rápido. Mas, quando a automação cresce, é importante organizar o
+          projeto: separar configuração, credenciais, funções de navegador,
+          regras de validação e logs. Isso facilita manutenção e evita que o
+          script vire um arquivo único difícil de entender.
+        </p>
+
+        <div class="terminal">
+          <span>$ python automacao.py</span><br />
+          carregar configuração → executar passos → registrar logs → validar resultado
+        </div>
+
+        <h2>Exemplo de estrutura simples</h2>
+        <p>
+          Para uma automação pequena, uma estrutura organizada já resolve muita
+          coisa. Não precisa criar arquitetura pesada, mas separar responsabilidades
+          deixa claro onde alterar quando muda um seletor, uma URL ou uma regra de
+          negócio.
+        </p>
+
+        <div class="terminal">
+          <span>$ tree automacao</span><br />
+          config.py<br />
+          browser.py<br />
+          tarefas.py<br />
+          logs/<br />
+          main.py
+        </div>
+
+        <h2>O que diferencia script de solução</h2>
+        <p>
+          Um script resolve uma dor imediata. Uma solução pode ser executada por
+          outras pessoas, falha de forma compreensível, protege dados sensíveis e
+          deixa rastros para manutenção. Esse é o ponto em que automação se
+          conecta com engenharia de software.
+        </p>
+
+        <p>
+          Quando uma automação passa a economizar horas de trabalho, ela merece o
+          mesmo cuidado de um sistema pequeno: README com instruções, variáveis de
+          ambiente, tratamento de erro, logs, versão do navegador quando houver
+          Selenium ou Playwright e uma forma simples de interromper a execução.
+          Esse cuidado reduz dependência de uma única pessoa e aumenta confiança
+          na rotina.
+        </p>
+
+        <h2>Automação também precisa de limite operacional</h2>
+        <p>
+          Outro ponto importante é definir limite. Quantos itens serão processados
+          por execução? O que acontece se uma página mudar? O script deve tentar
+          novamente ou parar? Essas respostas precisam estar no código e na
+          documentação. Sem limite, uma automação que nasceu para economizar tempo
+          pode gerar retrabalho, bloqueio de conta ou dados duplicados.
+        </p>
+
+        <p>
+          No fim, a melhor automação é aquela que executa a rotina, mostra o que
+          aconteceu e deixa claro quando precisa de intervenção humana.
+        </p>
+
+        <div class="related-grid">
+          <a class="pill-link" href="../apis-rest-node-dotnet/">APIs REST</a>
+          <a class="pill-link" href="../modernizacao-de-sistemas-legados/">Sistemas legados</a>
+          <a class="pill-link" href="https://www.youtube.com/@flaviooliveira-dev" target="_blank" rel="noopener noreferrer">Ver canal no YouTube</a>
+        </div>
+      </article>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>

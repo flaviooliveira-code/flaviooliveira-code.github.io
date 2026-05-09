@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Código Limpo na Prática | Flávio Oliveira</title>
+    <meta
+      name="description"
+      content="Reflexão prática sobre o livro Código Limpo: aprendizados que melhoraram meu código, pontos que adaptei e limites das regras no dia a dia."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link
+      rel="canonical"
+      href="https://flaviooliveira-code.github.io/blog/codigo-limpo-na-pratica/"
+    />
+    <meta property="og:title" content="Código Limpo na Prática" />
+    <meta
+      property="og:description"
+      content="O que levei de Código Limpo para projetos reais e onde a experiência prática muda a leitura das regras."
+    />
+    <meta
+      property="og:url"
+      content="https://flaviooliveira-code.github.io/blog/codigo-limpo-na-pratica/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="article:published_time" content="2026-05-09" />
+    <meta property="article:modified_time" content="2026-05-09" />
+    <meta property="article:author" content="https://flaviooliveira-code.github.io/" />
+    <meta property="article:section" content="Clean Code" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Código Limpo na Prática" />
+    <meta
+      name="twitter:description"
+      content="Reflexão prática sobre o livro Código Limpo: aprendizados que melhoraram meu código, pontos que adaptei e limites das regras no dia a dia."
+    />
+    <meta name="twitter:image" content="https://flaviooliveira-code.github.io/blog/images/codigo-limpo-capa.webp" />
+    <meta
+      property="og:image"
+      content="https://flaviooliveira-code.github.io/blog/images/codigo-limpo-capa.webp"
+    />
+    <script type="application/ld+json">
+      {
+            "@context": "https://schema.org",
+            "@graph": [
+                  {
+                        "@type": "BlogPosting",
+                        "@id": "https://flaviooliveira-code.github.io/blog/codigo-limpo-na-pratica/#article",
+                        "url": "https://flaviooliveira-code.github.io/blog/codigo-limpo-na-pratica/",
+                        "headline": "Código Limpo na prática: aprendizados, ajustes e discordâncias.",
+                        "description": "Reflexão prática sobre o livro Código Limpo: aprendizados que melhoraram meu código, pontos que adaptei e limites das regras no dia a dia.",
+                        "image": "https://flaviooliveira-code.github.io/blog/images/codigo-limpo-capa.webp",
+                        "datePublished": "2026-05-09",
+                        "dateModified": "2026-05-09",
+                        "inLanguage": "pt-BR",
+                        "articleSection": "Clean Code",
+                        "author": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "publisher": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "isPartOf": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/#blog"
+                        },
+                        "mainEntityOfPage": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/codigo-limpo-na-pratica/"
+                        }
+                  },
+                  {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://flaviooliveira-code.github.io/blog/codigo-limpo-na-pratica/#breadcrumb",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Início",
+                                    "item": "https://flaviooliveira-code.github.io/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://flaviooliveira-code.github.io/blog/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Código Limpo na Prática",
+                                    "item": "https://flaviooliveira-code.github.io/blog/codigo-limpo-na-pratica/"
+                              }
+                        ]
+                  },
+                  {
+                        "@type": "Person",
+                        "@id": "https://flaviooliveira-code.github.io/#person",
+                        "name": "Flávio Oliveira",
+                        "url": "https://flaviooliveira-code.github.io/",
+                        "sameAs": [
+                              "https://github.com/flaviooliveira-code",
+                              "https://linkedin.com/in/fladoliveira",
+                              "https://www.youtube.com/@flaviooliveira-dev",
+                              "http://lattes.cnpq.br/5709651219242256"
+                        ]
+                  }
+            ]
+      }
+    </script>
+    <meta name="theme-color" content="#05070b" />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../../assets/site-components.js"></script>
+  </head>
+  <body>
+    <site-navbar depth="2"></site-navbar>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <a class="back-link" href="../">← voltar para o blog</a>
+          <p class="kicker">// livros / clean code</p>
+          <h1>
+            Código Limpo na prática: aprendizados, ajustes e discordâncias.
+          </h1>
+          <p class="lead">
+            Ler Código Limpo mudou bastante meu olhar sobre manutenção, nomes,
+            funções e refatoração. Mas também deixou claro que regra técnica
+            precisa passar pelo filtro do projeto real.
+          </p>
+        </div>
+      </section>
+
+      <article class="article-shell">
+        <div class="book-gallery" aria-label="Fotos do livro Código Limpo">
+          <img
+            src="../images/codigo-limpo-capa.webp"
+            alt="Livro Código Limpo sobre a mesa de trabalho"
+            width="551"
+            height="980"
+          />
+          <img
+            src="../images/codigo-limpo-marcacoes.webp"
+            alt="Página marcada do livro Código Limpo com anotações"
+            width="551"
+            height="980"
+          />
+        </div>
+
+        <p>
+          Código Limpo foi um dos livros que mais mexeu com a forma como eu
+          escrevo e reviso software. Depois da leitura, comecei a prestar mais
+          atenção em intenção, nomes, tamanho de função, duplicação, testes,
+          acoplamento e principalmente no custo que um código confuso cria para
+          quem precisa manter o sistema depois.
+        </p>
+
+        <p>
+          Ao mesmo tempo, a leitura também me ajudou a perceber uma coisa
+          importante: bons princípios não devem virar religião. Em projeto real
+          existem prazo, legado, regra de negócio mal documentada, sistema em
+          produção, equipe com ritmos diferentes e decisões que precisam ser
+          tomadas com o contexto disponível.
+        </p>
+
+        <h2>O que eu realmente levei para o dia a dia</h2>
+        <p>
+          O principal aprendizado foi escrever código pensando em manutenção.
+          Não é sobre deixar tudo bonito por vaidade. É sobre reduzir ruído para
+          a próxima pessoa entender a regra, corrigir um problema ou evoluir uma
+          tela sem medo de quebrar outra parte do sistema.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Nomes melhores:</strong> variável, função e componente devem
+            explicar intenção antes de explicar implementação.
+          </li>
+          <li>
+            <strong>Funções menores:</strong> quando uma função faz coisa
+            demais, o erro costuma ficar escondido no meio do fluxo.
+          </li>
+          <li>
+            <strong>Refatoração contínua:</strong> melhorar aos poucos costuma
+            ser mais viável do que esperar uma reescrita perfeita.
+          </li>
+          <li>
+            <strong>Testes como proteção:</strong> teste não é só cobertura; é
+            confiança para alterar código que já atende alguém.
+          </li>
+        </ul>
+
+        <div class="callout">
+          <strong>Minha leitura hoje:</strong> código limpo não é código
+          pequeno. É código que deixa explícita a intenção da regra e reduz o
+          custo de mudança.
+        </div>
+
+        <h2>Um exemplo simples de intenção</h2>
+        <p>
+          Um dos pontos que mais levei para a prática foi evitar código que exige
+          adivinhação. Quando uma função chama `processarDados`, ela pode estar
+          fazendo qualquer coisa. Quando chama `calcularTotalDaVenda` ou
+          `validarCaixaAberto`, a intenção aparece antes mesmo de abrir a
+          implementação. Esse cuidado parece pequeno, mas faz diferença em telas
+          com regra de negócio, como produtos, vendas, reservas ou financeiro.
+        </p>
+
+        <div class="terminal">
+          <span>$ nomear-com-intencao</span><br />
+          processar() → validarEstoqueDisponivel()<br />
+          salvar() → registrarVendaComBaixaDeEstoque()
+        </div>
+
+        <h2>Onde eu aprimorei alguns pontos</h2>
+        <p>
+          Depois de aplicar esses conceitos em sistemas reais, comecei a olhar
+          menos para regra isolada e mais para equilíbrio. Nem toda função longa
+          é automaticamente ruim. Nem toda abstração deixa o sistema melhor. Às
+          vezes, uma duplicação pequena e explícita é mais fácil de manter do
+          que uma abstração genérica criada cedo demais.
+        </p>
+
+        <p>
+          Em frontend, por exemplo, componentizar é essencial, mas componentizar
+          antes de entender as variações reais pode criar componentes difíceis
+          de usar. Em backend, separar camadas ajuda muito, mas excesso de
+          indireção pode esconder a regra de negócio. O ganho está em organizar
+          sem perder clareza.
+        </p>
+
+        <p>
+          Hoje eu penso mais em legibilidade do fluxo do que em aplicar uma regra
+          isolada. Um arquivo pode ter mais linhas e ainda ser fácil de manter se
+          a ordem das decisões estiver clara. O contrário também é verdadeiro:
+          código muito fragmentado pode parecer limpo na superfície, mas obrigar
+          o desenvolvedor a pular por muitos arquivos para entender uma regra
+          simples.
+        </p>
+
+        <h2>Onde eu discordo na prática</h2>
+        <p>
+          Minha principal discordância não é com a intenção do livro, mas com a
+          aplicação rígida de algumas ideias. No dia a dia, nem sempre a melhor
+          decisão é a mais elegante tecnicamente. Às vezes, o melhor passo é
+          estabilizar uma regra, criar teste, isolar um trecho legado e só então
+          refatorar com mais segurança.
+        </p>
+
+        <p>
+          Também não acredito que exista um formato único de código limpo. Um
+          sistema de PDV, uma plataforma de reservas, uma automação em Python e
+          uma API corporativa têm pressões diferentes. O mesmo princípio precisa
+          ser aplicado de formas diferentes.
+        </p>
+
+        <p>
+          Também passei a tomar mais cuidado com abstrações criadas cedo demais.
+          A intenção de evitar duplicação é boa, mas abstração sem necessidade
+          real pode prender o sistema em uma estrutura difícil de mudar. Às vezes,
+          repetir um trecho pequeno por um tempo ajuda a entender melhor o padrão
+          antes de criar uma solução comum.
+        </p>
+
+        <h2>O que ficou como prática pessoal</h2>
+        <p>
+          Hoje eu tento escrever código com uma pergunta simples em mente: se eu
+          voltar nesse arquivo daqui a três meses, vou entender a decisão sem
+          precisar reconstruir tudo mentalmente? Quando a resposta é não, é
+          sinal de que o código precisa de nome melhor, divisão melhor, teste,
+          comentário pontual ou uma regra mais explícita.
+        </p>
+
+        <p>
+          Isso também mudou minha forma de revisar código. Eu procuro entender se
+          a pessoa que vai manter aquele trecho terá pistas suficientes: nomes,
+          validações, mensagens de erro, testes e uma separação razoável entre
+          interface, regra e acesso a dados. Quando essas pistas existem, o código
+          envelhece melhor.
+        </p>
+
+        <div class="terminal">
+          <span>$ aplicar-clean-code --com-contexto</span><br />
+          clareza primeiro → abstração quando ajuda → teste para mudar com
+          confiança → refatoração incremental
+        </div>
+
+        <h2>Conclusão</h2>
+        <p>
+          Código Limpo valeu muito para minha evolução, principalmente por mudar
+          meu senso de responsabilidade com manutenção. Mas a maturidade vem
+          quando a gente para de aplicar regra no automático e começa a decidir
+          com base no impacto real da mudança.
+        </p>
+
+        <div class="related-grid">
+          <a class="pill-link" href="../modernizacao-de-sistemas-legados/">
+            Modernização de sistemas legados
+          </a>
+          <a class="pill-link" href="../desenvolvimento-react-nextjs/">
+            React e Next.js
+          </a>
+          <a class="pill-link" href="../apis-rest-node-dotnet/">
+            APIs REST com Node.js e .NET
+          </a>
+        </div>
+      </article>
+    </main>
+
+    <site-footer></site-footer>
+  </body>
+</html>

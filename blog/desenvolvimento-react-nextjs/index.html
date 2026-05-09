@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Desenvolvimento React e Next.js | Flávio Oliveira</title>
+    <meta
+      name="description"
+      content="Como criar interfaces com React e Next.js pensando em componentes, performance, acessibilidade, SEO e manutenção de produto."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://flaviooliveira-code.github.io/blog/desenvolvimento-react-nextjs/" />
+    <meta property="og:title" content="Desenvolvimento React e Next.js" />
+    <meta
+      property="og:description"
+      content="Componentes, performance, acessibilidade e manutenção para interfaces modernas."
+    />
+    <meta property="og:url" content="https://flaviooliveira-code.github.io/blog/desenvolvimento-react-nextjs/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://flaviooliveira-code.github.io/blog/images/react-nextjs.svg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="article:published_time" content="2026-05-09" />
+    <meta property="article:modified_time" content="2026-05-09" />
+    <meta property="article:author" content="https://flaviooliveira-code.github.io/" />
+    <meta property="article:section" content="Frontend" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Desenvolvimento React e Next.js" />
+    <meta
+      name="twitter:description"
+      content="Como criar interfaces com React e Next.js pensando em componentes, performance, acessibilidade, SEO e manutenção de produto."
+    />
+    <meta name="twitter:image" content="https://flaviooliveira-code.github.io/blog/images/react-nextjs.svg" />
+    <script type="application/ld+json">
+      {
+            "@context": "https://schema.org",
+            "@graph": [
+                  {
+                        "@type": "BlogPosting",
+                        "@id": "https://flaviooliveira-code.github.io/blog/desenvolvimento-react-nextjs/#article",
+                        "url": "https://flaviooliveira-code.github.io/blog/desenvolvimento-react-nextjs/",
+                        "headline": "React e Next.js para interfaces que continuam evoluindo.",
+                        "description": "Como criar interfaces com React e Next.js pensando em componentes, performance, acessibilidade, SEO e manutenção de produto.",
+                        "image": "https://flaviooliveira-code.github.io/blog/images/react-nextjs.svg",
+                        "datePublished": "2026-05-09",
+                        "dateModified": "2026-05-09",
+                        "inLanguage": "pt-BR",
+                        "articleSection": "Frontend",
+                        "author": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "publisher": {
+                              "@id": "https://flaviooliveira-code.github.io/#person"
+                        },
+                        "isPartOf": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/#blog"
+                        },
+                        "mainEntityOfPage": {
+                              "@id": "https://flaviooliveira-code.github.io/blog/desenvolvimento-react-nextjs/"
+                        }
+                  },
+                  {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://flaviooliveira-code.github.io/blog/desenvolvimento-react-nextjs/#breadcrumb",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Início",
+                                    "item": "https://flaviooliveira-code.github.io/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://flaviooliveira-code.github.io/blog/"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Desenvolvimento React e Next.js",
+                                    "item": "https://flaviooliveira-code.github.io/blog/desenvolvimento-react-nextjs/"
+                              }
+                        ]
+                  },
+                  {
+                        "@type": "Person",
+                        "@id": "https://flaviooliveira-code.github.io/#person",
+                        "name": "Flávio Oliveira",
+                        "url": "https://flaviooliveira-code.github.io/",
+                        "sameAs": [
+                              "https://github.com/flaviooliveira-code",
+                              "https://linkedin.com/in/fladoliveira",
+                              "https://www.youtube.com/@flaviooliveira-dev",
+                              "http://lattes.cnpq.br/5709651219242256"
+                        ]
+                  }
+            ]
+      }
+    </script>
+    <meta name="theme-color" content="#05070b" />
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+      <script src="../../assets/site-components.js"></script>
+  </head>
+  <body>
+    <site-navbar depth="2"></site-navbar>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <a class="back-link" href="../">← voltar para o blog</a>
+          <p class="kicker">// frontend / produto</p>
+          <h1>React e Next.js para interfaces que continuam evoluindo.</h1>
+          <p class="lead">
+            Interface moderna não é só aparência. Ela precisa ser clara para o
+            usuário, previsível para o time e preparada para crescer.
+          </p>
+        </div>
+      </section>
+
+      <article class="article-shell">
+        <p>
+          React ajuda a dividir uma aplicação em componentes reutilizáveis. Next.js
+          amplia esse caminho com rotas, renderização, SEO e organização de
+          páginas. Juntos, eles são uma boa base para produtos digitais, sistemas
+          administrativos, dashboards e landings que precisam de performance.
+        </p>
+
+        <h2>Componentes precisam representar decisões reais</h2>
+        <p>
+          Um componente bom não existe só para reduzir linhas de código. Ele
+          encapsula uma decisão recorrente: botão com loading, campo com máscara,
+          tabela com paginação, modal de confirmação, menu de ações ou card de
+          KPI. Quando o componente nasce de uso real, a manutenção fica mais
+          simples.
+        </p>
+
+        <p>
+          O erro comum é componentizar cedo demais. Um componente criado antes de
+          entender as variações do produto geralmente nasce cheio de propriedades
+          booleanas, exceções visuais e regras escondidas. Eu prefiro observar
+          repetição real: se o mesmo comportamento aparece em várias telas, com
+          diferença pequena e previsível, aí faz sentido transformar em componente
+          comum.
+        </p>
+
+        <div class="terminal">
+          <span>$ componente --criterio</span><br />
+          repetição real → API simples → estados claros → acessibilidade → teste visual
+        </div>
+
+        <h2>Design e regra de negócio não devem brigar</h2>
+        <p>
+          Em sistemas operacionais, a interface precisa respeitar fluxo. Um PDV
+          precisa ser rápido. Um sistema de reservas precisa mostrar contexto. Um
+          dashboard precisa permitir leitura sem esforço. React facilita isso
+          quando estado, componentes e serviços são organizados sem misturar tudo
+          em uma única tela.
+        </p>
+
+        <ul>
+          <li>Estados de carregamento precisam ser claros.</li>
+          <li>Erros devem orientar a próxima ação.</li>
+          <li>Componentes comuns devem seguir o mesmo padrão visual.</li>
+          <li>Rotas e páginas devem refletir tarefas do usuário.</li>
+        </ul>
+
+        <h2>Formulários são onde produto e engenharia se encontram</h2>
+        <p>
+          Formulário parece simples, mas concentra muita regra: máscara, validação,
+          estado de carregamento, feedback, erro de API, permissão, edição,
+          criação rápida de registros relacionados e acessibilidade. Em produtos
+          reais, campos como fornecedor, cliente, empresa, CNPJ, telefone e valor
+          monetário precisam funcionar bem antes de qualquer detalhe visual mais
+          sofisticado.
+        </p>
+
+        <p>
+          Por isso eu trato formulários como parte central da arquitetura do
+          frontend. Componentes de input, select, date picker, modal e loading
+          precisam conversar com a API sem duplicar regra crítica. A interface
+          ajuda o usuário a não errar, mas o backend continua validando o que é
+          regra de negócio.
+        </p>
+
+        <h2>Next.js ajuda quando SEO e conteúdo importam</h2>
+        <p>
+          Para páginas públicas, Next.js é especialmente útil. Ele permite
+          metadados por rota, sitemap, robots, conteúdo renderizado no servidor e
+          melhor leitura para mecanismos de busca. Isso é importante para
+          landings, páginas de produto e artigos técnicos.
+        </p>
+
+        <p>
+          Mesmo em projetos React sem Next.js, vale aplicar a mesma mentalidade:
+          páginas públicas precisam de conteúdo legível, títulos claros,
+          metadados, imagens otimizadas e estrutura semântica. Para dashboards
+          autenticados, SEO perde importância, mas performance, acessibilidade e
+          consistência visual continuam sendo decisivos.
+        </p>
+
+        <div class="terminal">
+          <span>$ criar-interface --com-cuidado</span><br />
+          componente → estado → acessibilidade → performance → SEO
+        </div>
+
+        <h2>Performance começa nas escolhas pequenas</h2>
+        <p>
+          Nem toda otimização precisa ser complexa. Evitar renderizações
+          desnecessárias, carregar imagens no tamanho certo, separar componentes
+          pesados, controlar listas grandes e reduzir dependências já melhora
+          bastante a experiência. Em sistemas administrativos, uma tabela lenta ou
+          um modal que trava prejudica mais o usuário do que uma animação ausente.
+        </p>
+
+        <p>
+          Também considero estados vazios, skeletons e feedbacks de ação parte da
+          performance percebida. Quando a aplicação comunica o que está fazendo,
+          o usuário confia mais no fluxo, mesmo que a requisição leve alguns
+          segundos.
+        </p>
+
+        <h2>Acessibilidade não deve ficar para o final</h2>
+        <p>
+          Acessibilidade em React começa com HTML correto. Botão precisa ser
+          botão, link precisa navegar, modal precisa controlar foco, menu precisa
+          fechar com teclado e inputs precisam ter label. Quando esses detalhes
+          entram desde o começo, a interface fica melhor para leitores de tela,
+          teclado, dispositivos móveis e também para quem usa o sistema durante
+          muitas horas por dia.
+        </p>
+
+        <p>
+          Em sistemas administrativos, isso é ainda mais importante. O usuário
+          repete tarefas, compara dados, abre menus, confirma ações e preenche
+          formulários. Pequenas falhas de contraste, foco ou feedback acumulam
+          desgaste. Por isso, eu trato acessibilidade como parte de qualidade, não
+          como acabamento.
+        </p>
+
+        <h2>Organização de pastas deve ajudar a encontrar regra</h2>
+        <p>
+          Não existe uma única estrutura perfeita, mas uma boa organização deixa
+          claro onde ficam páginas, componentes, serviços de API, formatações,
+          máscaras e tipos. Quando a equipe encontra rápido onde alterar, o custo
+          de evolução cai.
+        </p>
+
+        <h2>O que eu priorizo</h2>
+        <p>
+          Eu priorizo consistência visual, acessibilidade, responsividade,
+          componentes reutilizáveis e integração limpa com API. A tecnologia
+          aparece como suporte para uma experiência mais estável, não como fim em
+          si mesma.
+        </p>
+
+        <div class="related-grid">
+          <a class="pill-link" href="../horus-pdv/">Hórus PDV</a>
+          <a class="pill-link" href="../plataforma-de-reservas/">Plataforma de Reservas</a>
+          <a class="pill-link" href="../apis-rest-node-dotnet/">APIs REST</a>
+        </div>
+      </article>
+    </main>
+    <site-footer></site-footer>
+  </body>
+</html>
