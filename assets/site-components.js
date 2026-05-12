@@ -12,7 +12,7 @@ class SiteNavbar extends HTMLElement {
       ["// projetos", `${sectionRoot}#projects`],
       ["// blog", blogHref],
       ["// habilidades", `${sectionRoot}#skills`],
-      ["// experiência", `${sectionRoot}#experience`],
+      // ["// experiência", `${sectionRoot}#experience`],
       ["// contato", `${sectionRoot}#contact`],
     ];
 
